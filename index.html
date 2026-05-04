@@ -408,6 +408,31 @@
     @media (max-width: 640px) {
       .hero-name { font-size: clamp(2.2rem, 10vw, 3.2rem) !important; }
     }
+
+    /* ── Modal ── */
+    .modal-backdrop {
+      position: fixed; inset: 0; z-index: 100;
+      background: rgba(8, 8, 16, 0.85); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+    }
+    .modal-backdrop.active { opacity: 1; pointer-events: auto; }
+    
+    .modal-box {
+      width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto;
+      background: #0e0e1a; border: 1px solid rgba(0,255,240,0.3); border-radius: 6px;
+      padding: 30px; position: relative;
+      transform: translateY(20px) scale(0.95); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 30px rgba(0,255,135,0.05);
+    }
+    .modal-backdrop.active .modal-box { transform: translateY(0) scale(1); }
+    
+    .modal-close {
+      position: absolute; top: 15px; right: 15px;
+      background: transparent; border: none; color: #7878a0;
+      cursor: pointer; padding: 5px; transition: color 0.2s;
+    }
+    .modal-close:hover { color: var(--magenta); }
   </style>
 </head>
 <body class="cyber-grid">
@@ -553,10 +578,9 @@
             <div class="flex flex-wrap gap-2 mb-8">
               <span class="tag">Python</span><span class="tag">Flet</span><span class="tag">Windows Installers</span><span class="tag">Licensing</span>
             </div>
-            <a href="#" class="btn-details">
-              <span data-i18n="view_repo">Repositorio</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            <button class="btn-details" onclick="openModal('p1')">
+              <span data-i18n="view_details">Ver Detalles -></span>
+            </button>
           </article>
 
           <!-- Prototipo Mobile POS -->
@@ -576,9 +600,9 @@
             <div class="flex flex-wrap gap-2 mb-8">
               <span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Problem Solving</span><span class="tag">UI/UX</span>
             </div>
-            <a href="#" class="btn-details">
+            <button class="btn-details" onclick="openModal('p2')">
               <span data-i18n="view_details">Ver Detalles -></span>
-            </a>
+            </button>
           </article>
 
           <!-- Digitalización Telecom -->
@@ -598,9 +622,9 @@
             <div class="flex flex-wrap gap-2 mb-8">
               <span class="tag">Mikrotik</span><span class="tag">Cisco</span><span class="tag">Ubiquiti</span><span class="tag">Networking</span>
             </div>
-            <a href="#" class="btn-details">
+            <button class="btn-details" onclick="openModal('p3')">
               <span data-i18n="view_details">Ver Detalles -></span>
-            </a>
+            </button>
           </article>
 
           <!-- Sistemas Académicos -->
@@ -620,10 +644,9 @@
             <div class="flex flex-wrap gap-2 mb-8">
               <span class="tag">Supabase</span><span class="tag">TailwindCSS</span><span class="tag">React</span><span class="tag">PostgreSQL</span>
             </div>
-            <a href="#" class="btn-details">
-              <span data-i18n="view_repo">Repositorio</span>
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            <button class="btn-details" onclick="openModal('p4')">
+              <span data-i18n="view_details">Ver Detalles -></span>
+            </button>
           </article>
 
         </div>
@@ -673,6 +696,30 @@
 
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════════════════ MODAL ══ -->
+    <div id="project-modal" class="modal-backdrop" onclick="closeModal(event)">
+      <div class="modal-box cyber-card" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="tdot" style="background:#00ff87;box-shadow:0 0 6px #00ff87"></div>
+          <h3 id="modal-title" class="font-mono font-bold text-xl" style="color:#eeeeff;">Title</h3>
+        </div>
+        <div class="divider mb-5"></div>
+        <p id="modal-desc" class="text-sm leading-relaxed mb-6" style="color:#7878a0;">Desc</p>
+        
+        <h4 class="font-mono text-xs uppercase tracking-widest mb-3" style="color:#00fff0;" data-i18n="modal_feat">Características Clave</h4>
+        <ul id="modal-features" class="font-mono text-xs mb-6 flex flex-col gap-2" style="color:#eeeeff;">
+        </ul>
+
+        <div class="p-4 rounded" style="background:rgba(0,255,135,0.03);border:1px solid rgba(0,255,135,0.1);">
+          <h4 class="font-mono text-xs uppercase tracking-widest mb-2" style="color:#44445a;" data-i18n="modal_metrics">Métricas / Impacto</h4>
+          <p id="modal-metrics" class="text-sm font-mono" style="color:#00ff87;">Data</p>
+        </div>
+      </div>
+    </div>
 
   </main>
 
@@ -753,7 +800,9 @@
       dev1_status: 'Estado: Prototipado Conceptual',
       footer_text: '¿Tienes un proyecto en mente o quieres hablar sobre tecnología?<br/>Estoy disponible para colaboraciones, freelance y nuevas oportunidades.',
       footer_btn: 'Enviar mensaje',
-      footer_avail: 'disponible para proyectos'
+      footer_avail: 'disponible para proyectos',
+      modal_feat: 'Características Clave',
+      modal_metrics: 'Métricas / Impacto'
     },
     en: {
       nav_featured: 'featured',
@@ -783,7 +832,65 @@
       dev1_status: 'Status: Conceptual Prototyping',
       footer_text: 'Have a project in mind or want to talk about technology?<br/>I am available for collaborations, freelance, and new opportunities.',
       footer_btn: 'Send message',
-      footer_avail: 'available for projects'
+      footer_avail: 'available for projects',
+      modal_feat: 'Key Features',
+      modal_metrics: 'Metrics / Impact'
+    }
+  };
+
+  /* ════════════════════════ Modal Data ════════════════════════ */
+  const PROJECT_DATA = {
+    p1: {
+      title: 'SisvenPOS',
+      es: {
+        desc: 'Un sistema completo de gestión comercial diseñado para entornos de alta concurrencia. Destaca por su arquitectura modular y la implementación de un motor de licencias cifrado que previene copias no autorizadas del software en múltiples sucursales.',
+        features: ['Arquitectura Cliente-Servidor (Python/SQLite)', 'Cifrado AES-256 para bases de datos locales', 'Generación de licencias RSA offline', 'Reportes dinámicos y automatizados en PDF'],
+        metrics: 'Más de 50,000 transacciones procesadas. Reducción del 90% en piratería.'
+      },
+      en: {
+        desc: 'A complete commercial management system designed for high-concurrency environments. It stands out for its modular architecture and the implementation of an encrypted licensing engine that prevents unauthorized software copying across multiple branches.',
+        features: ['Client-Server Architecture (Python/SQLite)', 'AES-256 encryption for local databases', 'Offline RSA license generation', 'Dynamic and automated PDF reporting'],
+        metrics: 'Over 50,000 transactions processed. 90% reduction in software piracy.'
+      }
+    },
+    p2: {
+      title: 'Prototipo Mobile POS',
+      es: {
+        desc: 'Una aplicación móvil de alto rendimiento que reemplaza los obsoletos sistemas de toma de pedidos en papel y PDF. Provee sincronización instantánea entre los meseros y el área de cocina, mejorando el flujo de trabajo del restaurante.',
+        features: ['Sincronización en tiempo real vía WebSockets', 'Soporte Offline-First para zonas sin Wi-Fi', 'Diseño UX minimalista y basado en gestos', 'Integración con impresoras térmicas Bluetooth'],
+        metrics: 'Mejora del 40% en velocidad de toma de pedidos.'
+      },
+      en: {
+        desc: 'A high-performance mobile app that replaces obsolete paper and PDF order-taking systems. It provides instant synchronization between waiters and the kitchen area, improving the restaurant\'s workflow.',
+        features: ['Real-time synchronization via WebSockets', 'Offline-First support for no-WiFi zones', 'Minimalist, gesture-based UX design', 'Integration with Bluetooth thermal printers'],
+        metrics: '40% improvement in order taking speed.'
+      }
+    },
+    p3: {
+      title: 'Infraestructura Telecom',
+      es: {
+        desc: 'Proyecto corporativo centrado en la modernización de la infraestructura de red. Se implementaron políticas estrictas de seguridad y scripts automatizados para el respaldo de configuraciones de enrutadores en diferentes zonas geográficas.',
+        features: ['Scripts automatizados para backups en Mikrotik', 'Monitorización SNMP centralizada', 'Firewalls con políticas Zero-Trust', 'Gestión de VLANs dinámicas'],
+        metrics: 'Uptime del 99.9% garantizado en la red core. 500+ equipos gestionados.'
+      },
+      en: {
+        desc: 'Corporate project focused on network infrastructure modernization. Strict security policies and automated scripts were implemented for backing up router configurations across different geographical zones.',
+        features: ['Automated backup scripts for Mikrotik', 'Centralized SNMP monitoring', 'Zero-Trust policy firewalls', 'Dynamic VLAN management'],
+        metrics: '99.9% guaranteed uptime on the core network. 500+ managed devices.'
+      }
+    },
+    p4: {
+      title: 'Sistemas Académicos',
+      es: {
+        desc: 'Plataforma web escalable desarrollada para instituciones educativas. Centraliza la administración de inventarios de laboratorio, préstamos de equipos y gestión de perfiles de usuario con un backend cloud-native.',
+        features: ['Autenticación JWT y Control de Roles', 'Dashboards analíticos interactivos', 'APIs RESTful de alto rendimiento', 'Arquitectura Serverless con Supabase'],
+        metrics: 'Implementado en 3 facultades. +1,200 estudiantes registrados.'
+      },
+      en: {
+        desc: 'Scalable web platform developed for educational institutions. It centralizes laboratory inventory administration, equipment loans, and user profile management with a cloud-native backend.',
+        features: ['JWT Authentication and Role-Based Access', 'Interactive analytical dashboards', 'High-performance RESTful APIs', 'Serverless architecture with Supabase'],
+        metrics: 'Implemented in 3 faculties. +1,200 registered students.'
+      }
     }
   };
 
@@ -806,6 +913,7 @@
     /* Update lang button labels */
     const label = lang === 'es' ? 'EN' : 'ES';
     document.querySelectorAll('#lang-toggle, #lang-toggle-m').forEach(b => b.textContent = label);
+    if(typeof updateModalContent === 'function') updateModalContent();
   }
 
   function toggleLang() {
@@ -849,6 +957,37 @@
     });
   }, { rootMargin: '-40% 0px -55% 0px' });
   document.querySelectorAll('section[id], footer[id]').forEach(s => navObs.observe(s));
+
+  /* ════════════════════ Modal Logic ════════════════════ */
+  const modal = document.getElementById('project-modal');
+  let currentProject = null;
+
+  function openModal(projectId) {
+    currentProject = projectId;
+    updateModalContent();
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(e) {
+    if(e && e.target !== modal && !e.target.closest('.modal-close')) return;
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function updateModalContent() {
+    if(!currentProject) return;
+    const data = PROJECT_DATA[currentProject];
+    const langData = data[currentLang];
+    
+    document.getElementById('modal-title').textContent = data.title;
+    document.getElementById('modal-desc').innerHTML = langData.desc;
+    
+    const ul = document.getElementById('modal-features');
+    ul.innerHTML = langData.features.map(f => `<li class="flex items-start gap-2"><span style="color:#00fff0">▸</span> <span>${f}</span></li>`).join('');
+    
+    document.getElementById('modal-metrics').textContent = '> ' + langData.metrics;
+  }
 
   /* ════════════════════ Canvas particles ════════════════════ */
   (function () {
