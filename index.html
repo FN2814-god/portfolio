@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terminal de Proyectos — Cardoza.Dev</title>
-  <meta name="description" content="Portfolio de proyectos de José Enmanuel Cardoza. Soluciones reales de software, sistemas POS y desarrollo web." />
+  <meta name="description"
+    content="Portfolio de proyectos de José Enmanuel Cardoza. Soluciones reales de software, sistemas POS y desarrollo web." />
   <link rel="icon" type="image/png" href="favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -12,9 +14,9 @@
       theme: {
         extend: {
           colors: {
-            cyan:    '#00fff0',
+            cyan: '#00fff0',
             magenta: '#ff00c8',
-            accent:  '#00ff87',
+            accent: '#00ff87',
             'accent-dim': '#00cc6a',
             surface: '#080810',
             's1': '#0e0e18',
@@ -31,22 +33,22 @@
             sans: ['"Inter"', 'system-ui', 'sans-serif'],
           },
           animation: {
-            'blink':      'blink 1.1s step-end infinite',
+            'blink': 'blink 1.1s step-end infinite',
             'pulse-slow': 'pulse 3s ease-in-out infinite',
-            'float':      'float 6s ease-in-out infinite',
-            'scan':       'scan 8s linear infinite',
-            'glitch':     'glitch 4s infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'scan': 'scan 8s linear infinite',
+            'glitch': 'glitch 4s infinite',
           },
           keyframes: {
-            blink:  { '0%,100%': { opacity:'1' }, '50%': { opacity:'0' } },
-            float:  { '0%,100%': { transform:'translateY(0px)' }, '50%': { transform:'translateY(-12px)' } },
-            scan:   { '0%': { transform:'translateY(-100%)' }, '100%': { transform:'translateY(100vh)' } },
+            blink: { '0%,100%': { opacity: '1' }, '50%': { opacity: '0' } },
+            float: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-12px)' } },
+            scan: { '0%': { transform: 'translateY(-100%)' }, '100%': { transform: 'translateY(100vh)' } },
             glitch: {
-              '0%,90%,100%': { clipPath:'inset(0 0 100% 0)', transform:'translate(0)' },
-              '92%': { clipPath:'inset(20% 0 50% 0)', transform:'translate(-3px, 2px)', color:'#ff00c8' },
-              '94%': { clipPath:'inset(60% 0 10% 0)', transform:'translate(3px, -2px)', color:'#00fff0' },
-              '96%': { clipPath:'inset(40% 0 30% 0)', transform:'translate(-2px, 1px)', color:'#00ff87' },
-              '98%': { clipPath:'inset(0 0 70% 0)', transform:'translate(2px, -1px)' },
+              '0%,90%,100%': { clipPath: 'inset(0 0 100% 0)', transform: 'translate(0)' },
+              '92%': { clipPath: 'inset(20% 0 50% 0)', transform: 'translate(-3px, 2px)', color: '#ff00c8' },
+              '94%': { clipPath: 'inset(60% 0 10% 0)', transform: 'translate(3px, -2px)', color: '#00fff0' },
+              '96%': { clipPath: 'inset(40% 0 30% 0)', transform: 'translate(-2px, 1px)', color: '#00ff87' },
+              '98%': { clipPath: 'inset(0 0 70% 0)', transform: 'translate(2px, -1px)' },
             },
           },
         },
@@ -55,19 +57,27 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
-
-    :root {
-      --green:   #00ff87;
-      --cyan:    #00fff0;
-      --magenta: #ff00c8;
-      --purple:  #9d00ff;
-      --bg:      #080810;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --green: #00ff87;
+      --cyan: #00fff0;
+      --magenta: #ff00c8;
+      --purple: #9d00ff;
+      --bg: #080810;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background-color: var(--bg);
@@ -77,22 +87,33 @@
     }
 
     /* ── Scrollbar ── */
-    ::-webkit-scrollbar { width: 3px; }
-    ::-webkit-scrollbar-track { background: #0a0a12; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(var(--green), var(--cyan)); border-radius: 2px; }
+    ::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0a0a12;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(var(--green), var(--cyan));
+      border-radius: 2px;
+    }
 
     /* ── Selection ── */
-    ::selection { background: rgba(0,255,240,0.2); color: #fff; }
+    ::selection {
+      background: rgba(0, 255, 240, 0.2);
+      color: #fff;
+    }
 
     /* ── Scanlines overlay ── */
     body::before {
       content: '';
-      position: fixed; inset: 0;
-      background: repeating-linear-gradient(
-        to bottom,
-        transparent 0px, transparent 2px,
-        rgba(0,0,0,0.06) 2px, rgba(0,0,0,0.06) 3px
-      );
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(to bottom,
+          transparent 0px, transparent 2px,
+          rgba(0, 0, 0, 0.06) 2px, rgba(0, 0, 0, 0.06) 3px);
       pointer-events: none;
       z-index: 9998;
     }
@@ -100,7 +121,9 @@
     /* ── Moving scan line ── */
     .scan-line {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 2px;
       background: linear-gradient(90deg, transparent 0%, var(--cyan) 40%, var(--green) 60%, transparent 100%);
       opacity: 0.06;
@@ -112,8 +135,8 @@
     /* ── Cyber grid background ── */
     .cyber-grid {
       background-image:
-        linear-gradient(rgba(0,255,240,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,255,240,0.025) 1px, transparent 1px);
+        linear-gradient(rgba(0, 255, 240, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 240, 0.025) 1px, transparent 1px);
       background-size: 48px 48px;
     }
 
@@ -122,16 +145,21 @@
     .corner::after {
       content: '';
       position: absolute;
-      width: 14px; height: 14px;
+      width: 14px;
+      height: 14px;
       pointer-events: none;
     }
+
     .corner::before {
-      top: -1px; left: -1px;
+      top: -1px;
+      left: -1px;
       border-top: 2px solid var(--green);
       border-left: 2px solid var(--green);
     }
+
     .corner::after {
-      bottom: -1px; right: -1px;
+      bottom: -1px;
+      right: -1px;
       border-bottom: 2px solid var(--cyan);
       border-right: 2px solid var(--cyan);
     }
@@ -141,44 +169,106 @@
       position: relative;
       display: inline-block;
       color: var(--green);
-      text-shadow: 0 0 30px rgba(0,255,135,0.5), 0 0 60px rgba(0,255,135,0.2);
+      text-shadow: 0 0 30px rgba(0, 255, 135, 0.5), 0 0 60px rgba(0, 255, 135, 0.2);
     }
+
     .glitch::before,
     .glitch::after {
       content: attr(data-text);
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
+
     .glitch::before {
       color: var(--magenta);
       animation: glitch-1 4s infinite;
       clip-path: inset(0 0 100% 0);
     }
+
     .glitch::after {
       color: var(--cyan);
       animation: glitch-2 4s infinite;
       clip-path: inset(0 0 100% 0);
     }
+
     @keyframes glitch-1 {
-      0%,89%,100% { clip-path:inset(0 0 100% 0); transform:translate(0); }
-      90% { clip-path:inset(15% 0 55% 0); transform:translate(-3px, 2px); }
-      92% { clip-path:inset(65% 0 5% 0);  transform:translate(3px, -1px); }
-      94% { clip-path:inset(35% 0 35% 0); transform:translate(-2px, 3px); }
-      96% { clip-path:inset(80% 0 2% 0);  transform:translate(2px, -2px); }
+
+      0%,
+      89%,
+      100% {
+        clip-path: inset(0 0 100% 0);
+        transform: translate(0);
+      }
+
+      90% {
+        clip-path: inset(15% 0 55% 0);
+        transform: translate(-3px, 2px);
+      }
+
+      92% {
+        clip-path: inset(65% 0 5% 0);
+        transform: translate(3px, -1px);
+      }
+
+      94% {
+        clip-path: inset(35% 0 35% 0);
+        transform: translate(-2px, 3px);
+      }
+
+      96% {
+        clip-path: inset(80% 0 2% 0);
+        transform: translate(2px, -2px);
+      }
     }
+
     @keyframes glitch-2 {
-      0%,91%,100% { clip-path:inset(0 0 100% 0); transform:translate(0); }
-      92% { clip-path:inset(50% 0 25% 0); transform:translate(3px, -2px); }
-      94% { clip-path:inset(10% 0 70% 0); transform:translate(-3px, 2px); }
-      96% { clip-path:inset(70% 0 8% 0);  transform:translate(2px, -1px); }
-      98% { clip-path:inset(25% 0 50% 0); transform:translate(-2px, 2px); }
+
+      0%,
+      91%,
+      100% {
+        clip-path: inset(0 0 100% 0);
+        transform: translate(0);
+      }
+
+      92% {
+        clip-path: inset(50% 0 25% 0);
+        transform: translate(3px, -2px);
+      }
+
+      94% {
+        clip-path: inset(10% 0 70% 0);
+        transform: translate(-3px, 2px);
+      }
+
+      96% {
+        clip-path: inset(70% 0 8% 0);
+        transform: translate(2px, -1px);
+      }
+
+      98% {
+        clip-path: inset(25% 0 50% 0);
+        transform: translate(-2px, 2px);
+      }
     }
 
     /* ── Neon text ── */
-    .neon-green { color: var(--green); text-shadow: 0 0 8px rgba(0,255,135,0.6), 0 0 20px rgba(0,255,135,0.3); }
-    .neon-cyan  { color: var(--cyan);  text-shadow: 0 0 8px rgba(0,255,240,0.6), 0 0 20px rgba(0,255,240,0.3); }
-    .neon-mag   { color: var(--magenta); text-shadow: 0 0 8px rgba(255,0,200,0.6); }
+    .neon-green {
+      color: var(--green);
+      text-shadow: 0 0 8px rgba(0, 255, 135, 0.6), 0 0 20px rgba(0, 255, 135, 0.3);
+    }
+
+    .neon-cyan {
+      color: var(--cyan);
+      text-shadow: 0 0 8px rgba(0, 255, 240, 0.6), 0 0 20px rgba(0, 255, 240, 0.3);
+    }
+
+    .neon-mag {
+      color: var(--magenta);
+      text-shadow: 0 0 8px rgba(255, 0, 200, 0.6);
+    }
 
     /* ── Section label ── */
     .section-label {
@@ -197,26 +287,39 @@
       transition: color 0.2s;
       position: relative;
     }
+
     .nav-link::after {
       content: '';
       position: absolute;
-      bottom: -2px; left: 0;
-      width: 0; height: 1px;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
       background: linear-gradient(90deg, var(--green), var(--cyan));
       transition: width 0.25s ease;
     }
-    .nav-link:hover { color: var(--green); }
-    .nav-link:hover::after { width: 100%; }
+
+    .nav-link:hover {
+      color: var(--green);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
 
     /* ── Buttons ── */
     .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 11px 28px;
       background: linear-gradient(135deg, var(--green) 0%, var(--cyan) 100%);
       color: #000;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem; font-weight: 700;
-      border-radius: 4px; border: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 4px;
+      border: none;
       cursor: pointer;
       transition: all 0.25s ease;
       text-decoration: none;
@@ -224,43 +327,52 @@
       clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
       position: relative;
     }
+
     .btn-primary:hover {
-      box-shadow: 0 0 28px rgba(0,255,135,0.5), 0 0 60px rgba(0,255,240,0.2);
+      box-shadow: 0 0 28px rgba(0, 255, 135, 0.5), 0 0 60px rgba(0, 255, 240, 0.2);
       transform: translateY(-2px);
       filter: brightness(1.1);
     }
 
     .btn-outline {
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 10px 28px;
       background: transparent;
       color: var(--magenta);
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem; font-weight: 500;
+      font-size: 0.8rem;
+      font-weight: 500;
       border-radius: 4px;
-      border: 1px solid rgba(255,0,200,0.4);
+      border: 1px solid rgba(255, 0, 200, 0.4);
       cursor: pointer;
       transition: all 0.25s ease;
       text-decoration: none;
       letter-spacing: 0.04em;
       clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
     }
+
     .btn-outline:hover {
-      background: rgba(255,0,200,0.08);
+      background: rgba(255, 0, 200, 0.08);
       border-color: var(--magenta);
-      box-shadow: 0 0 20px rgba(255,0,200,0.3);
+      box-shadow: 0 0 20px rgba(255, 0, 200, 0.3);
       color: #ff66e0;
       transform: translateY(-2px);
     }
 
     .btn-details {
-      display: inline-flex; align-items: center; gap: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem; font-weight: 600;
+      font-size: 0.72rem;
+      font-weight: 600;
       color: var(--green);
       transition: all 0.2s;
       margin-top: auto;
     }
+
     .btn-details:hover {
       color: var(--cyan);
       gap: 10px;
@@ -268,25 +380,34 @@
 
     /* ── Tag badge ── */
     .tag {
-      display: inline-flex; align-items: center; gap: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       padding: 5px 13px;
       border-radius: 3px;
-      background: rgba(0,255,240,0.05);
-      border: 1px solid rgba(0,255,240,0.15);
+      background: rgba(0, 255, 240, 0.05);
+      border: 1px solid rgba(0, 255, 240, 0.15);
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.76rem; color: #9090b8;
+      font-size: 0.76rem;
+      color: #9090b8;
       transition: all 0.2s ease;
       cursor: default;
     }
+
     .tag:hover {
-      background: rgba(0,255,135,0.1);
-      border-color: rgba(0,255,135,0.5);
+      background: rgba(0, 255, 135, 0.1);
+      border-color: rgba(0, 255, 135, 0.5);
       color: var(--green);
-      box-shadow: 0 0 10px rgba(0,255,135,0.15);
+      box-shadow: 0 0 10px rgba(0, 255, 135, 0.15);
     }
 
     /* ── Terminal dot ── */
-    .tdot { display: inline-block; border-radius: 50%; width: 10px; height: 10px; }
+    .tdot {
+      display: inline-block;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+    }
 
     /* ── Project card ── */
     .project-card {
@@ -301,29 +422,41 @@
       height: 100%;
       transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
+
     .project-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; height: 1px;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
       background: linear-gradient(90deg, transparent, var(--green) 30%, var(--cyan) 70%, transparent);
       opacity: 0;
       transition: opacity 0.3s;
     }
+
     .project-card::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(0,255,135,0.03) 0%, transparent 60%);
+      background: linear-gradient(135deg, rgba(0, 255, 135, 0.03) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.3s;
     }
+
     .project-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(0,255,135,0.3);
-      box-shadow: 0 0 30px rgba(0,255,135,0.08), 0 8px 40px rgba(0,0,0,0.6);
+      border-color: rgba(0, 255, 135, 0.3);
+      box-shadow: 0 0 30px rgba(0, 255, 135, 0.08), 0 8px 40px rgba(0, 0, 0, 0.6);
     }
-    .project-card:hover::before { opacity: 1; }
-    .project-card:hover::after  { opacity: 1; }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-card:hover::after {
+      opacity: 1;
+    }
 
     .cyber-card {
       clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
@@ -331,22 +464,26 @@
 
     .dev-card {
       background: #0a0a14;
-      border: 1px dashed rgba(157,0,255,0.3);
+      border: 1px dashed rgba(157, 0, 255, 0.3);
       position: relative;
     }
+
     .dev-card:hover {
       border-style: solid;
       border-color: var(--purple);
-      box-shadow: 0 0 30px rgba(157,0,255,0.1);
+      box-shadow: 0 0 30px rgba(157, 0, 255, 0.1);
     }
 
     /* ── Icon box ── */
     .icon-box {
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      background: rgba(0,255,135,0.07);
-      border: 1px solid rgba(0,255,135,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 255, 135, 0.07);
+      border: 1px solid rgba(0, 255, 135, 0.18);
       flex-shrink: 0;
     }
 
@@ -356,12 +493,16 @@
       transform: translateY(22px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* ── Divider glow ── */
     .divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(0,255,240,0.15) 30%, rgba(0,255,135,0.15) 70%, transparent);
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 240, 0.15) 30%, rgba(0, 255, 135, 0.15) 70%, transparent);
     }
 
     /* ── Language switcher btn ── */
@@ -372,69 +513,108 @@
       letter-spacing: 0.12em;
       padding: 5px 14px;
       border-radius: 3px;
-      border: 1px solid rgba(0,255,135,0.35);
+      border: 1px solid rgba(0, 255, 135, 0.35);
       background: transparent;
       color: var(--green);
       cursor: pointer;
       transition: all 0.2s ease;
       clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px));
     }
+
     .lang-btn:hover {
-      background: rgba(0,255,135,0.1);
-      box-shadow: 0 0 14px rgba(0,255,135,0.3);
+      background: rgba(0, 255, 135, 0.1);
+      box-shadow: 0 0 14px rgba(0, 255, 135, 0.3);
     }
 
     /* ── Contact btn ── */
     .btn-contact {
-      display: inline-flex; align-items: center; gap: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       padding: 14px 40px;
       background: linear-gradient(135deg, var(--green) 0%, var(--cyan) 100%);
       color: #000;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem; font-weight: 700;
+      font-size: 0.85rem;
+      font-weight: 700;
       letter-spacing: 0.06em;
       border-radius: 4px;
-      border: none; cursor: pointer;
+      border: none;
+      cursor: pointer;
       text-decoration: none;
       transition: all 0.25s ease;
       clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
     }
+
     .btn-contact:hover {
-      box-shadow: 0 0 36px rgba(0,255,135,0.55), 0 0 80px rgba(0,255,240,0.25);
+      box-shadow: 0 0 36px rgba(0, 255, 135, 0.55), 0 0 80px rgba(0, 255, 240, 0.25);
       transform: translateY(-3px);
       filter: brightness(1.08);
     }
 
     @media (max-width: 640px) {
-      .hero-name { font-size: clamp(2.2rem, 10vw, 3.2rem) !important; }
+      .hero-name {
+        font-size: clamp(2.2rem, 10vw, 3.2rem) !important;
+      }
     }
 
     /* ── Modal ── */
     .modal-backdrop {
-      position: fixed; inset: 0; z-index: 100;
-      background: rgba(8, 8, 16, 0.85); backdrop-filter: blur(8px);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(8, 8, 16, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
     }
-    .modal-backdrop.active { opacity: 1; pointer-events: auto; }
-    
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
     .modal-box {
-      width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto;
-      background: #0e0e1a; border: 1px solid rgba(0,255,240,0.3); border-radius: 6px;
-      padding: 30px; position: relative;
-      transform: translateY(20px) scale(0.95); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 30px rgba(0,255,135,0.05);
+      width: 90%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: #0e0e1a;
+      border: 1px solid rgba(8, 12, 12, 0.3);
+      border-radius: 6px;
+      padding: 30px;
+      position: relative;
+      transform: translateY(20px) scale(0.95);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 255, 135, 0.05);
     }
-    .modal-backdrop.active .modal-box { transform: translateY(0) scale(1); }
-    
+
+    .modal-backdrop.active .modal-box {
+      transform: translateY(0) scale(1);
+    }
+
     .modal-close {
-      position: absolute; top: 15px; right: 15px;
-      background: transparent; border: none; color: #7878a0;
-      cursor: pointer; padding: 5px; transition: color 0.2s;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: transparent;
+      border: none;
+      color: #7878a0;
+      cursor: pointer;
+      padding: 5px;
+      transition: color 0.2s;
     }
-    .modal-close:hover { color: var(--magenta); }
+
+    .modal-close:hover {
+      color: var(--magenta);
+    }
   </style>
 </head>
+
 <body class="cyber-grid">
 
   <!-- Scanline sweep -->
@@ -442,7 +622,7 @@
 
   <!-- ══════════════════════════════════════════════ HEADER ══ -->
   <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300"
-          style="background:rgba(8,8,16,0.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,255,240,0.07);">
+    style="background:rgba(8,8,16,0.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,255,240,0.07);">
     <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between">
 
       <!-- Brand (Hub Principal) -->
@@ -457,9 +637,9 @@
 
       <!-- Desktop nav + lang switcher -->
       <div class="hidden sm:flex items-center gap-7">
-        <a href="#destacados"    class="nav-link" data-i18n="nav_featured">destacados</a>
+        <a href="#destacados" class="nav-link" data-i18n="nav_featured">destacados</a>
         <a href="#en-desarrollo" class="nav-link" data-i18n="nav_dev">en desarrollo</a>
-        <a href="#footer"        class="nav-link" data-i18n="nav_contact">contacto</a>
+        <a href="#footer" class="nav-link" data-i18n="nav_contact">contacto</a>
         <button id="lang-toggle" class="lang-btn" onclick="toggleLang()">EN</button>
       </div>
 
@@ -467,11 +647,16 @@
       <div class="sm:hidden flex items-center gap-3">
         <button class="lang-btn text-xs px-2 py-1" onclick="toggleLang()" id="lang-toggle-m">EN</button>
         <button id="menu-btn" class="p-1" style="color:#7878a0" aria-label="Menú">
-          <svg id="icon-open" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          <svg id="icon-open" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
           </svg>
-          <svg id="icon-close" class="hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          <svg id="icon-close" class="hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
       </div>
@@ -479,10 +664,11 @@
 
     <!-- Mobile dropdown -->
     <div id="mobile-menu" class="hidden sm:hidden px-5 pb-5 pt-3 flex flex-col gap-4"
-         style="background:rgba(8,8,16,0.98);border-top:1px solid rgba(0,255,240,0.06);">
-      <a href="#destacados"    class="nav-link text-sm" data-i18n="nav_featured" onclick="closeMobileMenu()">destacados</a>
-      <a href="#en-desarrollo" class="nav-link text-sm" data-i18n="nav_dev"      onclick="closeMobileMenu()">en desarrollo</a>
-      <a href="#footer"        class="nav-link text-sm" data-i18n="nav_contact"  onclick="closeMobileMenu()">contacto</a>
+      style="background:rgba(8,8,16,0.98);border-top:1px solid rgba(0,255,240,0.06);">
+      <a href="#destacados" class="nav-link text-sm" data-i18n="nav_featured" onclick="closeMobileMenu()">destacados</a>
+      <a href="#en-desarrollo" class="nav-link text-sm" data-i18n="nav_dev" onclick="closeMobileMenu()">en
+        desarrollo</a>
+      <a href="#footer" class="nav-link text-sm" data-i18n="nav_contact" onclick="closeMobileMenu()">contacto</a>
     </div>
   </header>
 
@@ -494,14 +680,18 @@
       <canvas id="particles" class="absolute inset-0 pointer-events-none" style="opacity:0.5;"></canvas>
 
       <!-- Glow blobs -->
-      <div class="absolute pointer-events-none" style="top:-8%;left:-4%;width:650px;height:650px;background:radial-gradient(circle,rgba(0,255,135,0.05) 0%,transparent 65%);filter:blur(70px);"></div>
-      <div class="absolute pointer-events-none" style="bottom:-10%;right:-4%;width:550px;height:550px;background:radial-gradient(circle,rgba(255,0,200,0.05) 0%,transparent 65%);filter:blur(70px);"></div>
+      <div class="absolute pointer-events-none"
+        style="top:-8%;left:-4%;width:650px;height:650px;background:radial-gradient(circle,rgba(0,255,135,0.05) 0%,transparent 65%);filter:blur(70px);">
+      </div>
+      <div class="absolute pointer-events-none"
+        style="bottom:-10%;right:-4%;width:550px;height:550px;background:radial-gradient(circle,rgba(255,0,200,0.05) 0%,transparent 65%);filter:blur(70px);">
+      </div>
 
       <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 w-full relative z-10">
 
         <!-- Terminal pill -->
         <div class="inline-flex items-center gap-2 mb-8 px-4 py-2 font-mono text-xs"
-             style="background:rgba(0,255,135,0.05);border:1px solid rgba(0,255,135,0.18);border-radius:3px;color:#44445a;">
+          style="background:rgba(0,255,135,0.05);border:1px solid rgba(0,255,135,0.18);border-radius:3px;color:#44445a;">
           <span class="tdot bg-red-500"></span>
           <span class="tdot bg-yellow-400"></span>
           <span class="tdot" style="background:#00ff87;box-shadow:0 0 6px #00ff87"></span>
@@ -510,11 +700,12 @@
         </div>
 
         <!-- Prompt Subtitle -->
-        <p class="section-label mb-4"><span style="color:#44445a">$</span> <span data-i18n="hero_cmd">ls -la ./projects_and_demos</span></p>
+        <p class="section-label mb-4"><span style="color:#44445a">$</span> <span data-i18n="hero_cmd">ls -la
+            ./projects_and_demos</span></p>
 
         <!-- Title with glitch -->
         <h1 class="hero-name font-mono font-bold leading-none mb-6"
-            style="font-size:clamp(2.5rem,8vw,5.5rem);letter-spacing:-0.02em;">
+          style="font-size:clamp(2.5rem,8vw,5.5rem);letter-spacing:-0.02em;">
           <span class="glitch" data-text="Terminal de Proyectos" data-i18n="hero_title">Terminal de Proyectos</span>
         </h1>
 
@@ -526,17 +717,24 @@
 
         <!-- Bio / Description -->
         <p class="max-w-2xl leading-relaxed mb-10" style="color:#7878a0;font-size:1rem;">
-          <span data-i18n="hero_desc">Aquí se exhiben soluciones reales, desde sistemas de escritorio complejos hasta prototipos móviles fluidos y arquitecturas de bases de datos optimizadas. Cada línea de código está diseñada para la <span style="color:#eeeeff;">eficiencia y seguridad</span>.</span>
+          <span data-i18n="hero_desc">Aquí se exhiben soluciones reales, desde sistemas de escritorio complejos hasta
+            prototipos móviles fluidos y arquitecturas de bases de datos optimizadas. Cada línea de código está diseñada
+            para la <span style="color:#eeeeff;">eficiencia y seguridad</span>.</span>
         </p>
 
         <!-- CTAs -->
         <div class="flex flex-wrap gap-4">
           <a href="#destacados" class="btn-primary">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z" />
+            </svg>
             <span data-i18n="hero_cta1">Explorar Código</span>
           </a>
           <a href="#en-desarrollo" class="btn-outline">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path
+                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+            </svg>
             <span data-i18n="hero_cta2">Laboratorio</span>
           </a>
         </div>
@@ -549,7 +747,8 @@
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
 
         <div class="reveal mb-14">
-          <p class="section-label mb-3"><span style="color:#44445a">$</span> <span data-i18n="p_cmd">cat featured.json</span></p>
+          <p class="section-label mb-3"><span style="color:#44445a">$</span> <span data-i18n="p_cmd">cat
+              featured.json</span></p>
           <h2 class="text-3xl sm:text-4xl font-bold" style="color:#eeeeff;">
             <span data-i18n="p_title">Proyectos</span>
             <span class="neon-green"> <span data-i18n="p_title2">destacados</span></span>
@@ -563,20 +762,25 @@
             <div class="flex items-start justify-between mb-5">
               <div class="icon-box">
                 <svg width="18" height="18" fill="none" stroke="#00ff87" stroke-width="1.8" viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
                 </svg>
               </div>
               <span class="font-mono text-xs flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full animate-pulse-slow" style="background:#00ff87;box-shadow:0 0 6px #00ff87;"></span>
+                <span class="w-2 h-2 rounded-full animate-pulse-slow"
+                  style="background:#00ff87;box-shadow:0 0 6px #00ff87;"></span>
                 <span class="neon-green">PRODUCTION</span>
               </span>
             </div>
             <h3 class="font-mono font-semibold mb-3" style="font-size:1.1rem;color:#eeeeff;">SisvenPOS</h3>
             <p class="text-sm leading-relaxed mb-6" style="color:#7878a0;">
-              <span data-i18n="p1_desc">Aplicación de escritorio para punto de venta desarrollada con <span style="color:#eeeeff;">Python y Flet</span>. Implementa integración de claves de licencia y avanzadas medidas antipiratería.</span>
+              <span data-i18n="p1_desc">Aplicación de escritorio para punto de venta desarrollada con <span
+                  style="color:#eeeeff;">Python y Flet</span>. Implementa integración de claves de licencia y avanzadas
+                medidas antipiratería.</span>
             </p>
             <div class="flex flex-wrap gap-2 mb-8">
-              <span class="tag">Python</span><span class="tag">Flet</span><span class="tag">Windows Installers</span><span class="tag">Licensing</span>
+              <span class="tag">Python</span><span class="tag">Flet</span><span class="tag">Windows
+                Installers</span><span class="tag">Licensing</span>
             </div>
             <button class="btn-details" onclick="openModal('p1')">
               <span data-i18n="view_details">Ver Detalles -></span>
@@ -588,17 +792,22 @@
             <div class="flex items-start justify-between mb-5">
               <div class="icon-box" style="background:rgba(0,255,240,0.07);border-color:rgba(0,255,240,0.2);">
                 <svg width="18" height="18" fill="none" stroke="#00fff0" stroke-width="1.8" viewBox="0 0 24 24">
-                  <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
+                  <rect x="5" y="2" width="14" height="20" rx="2" />
+                  <path d="M12 18h.01" />
                 </svg>
               </div>
               <span class="font-mono text-xs neon-cyan">UI / MOBILE</span>
             </div>
-            <h3 class="font-mono font-semibold mb-3" style="font-size:1.1rem;color:#eeeeff;" data-i18n="p2_name">Prototipo Mobile POS</h3>
+            <h3 class="font-mono font-semibold mb-3" style="font-size:1.1rem;color:#eeeeff;" data-i18n="p2_name">
+              Prototipo Mobile POS</h3>
             <p class="text-sm leading-relaxed mb-6" style="color:#7878a0;">
-              <span data-i18n="p2_desc">Interfaz de usuario fluida para la gestión de <span style="color:#eeeeff;">restaurantes y comandas</span>. Desarrollada con React Native y Expo, enfocada en la experiencia de usuario táctil.</span>
+              <span data-i18n="p2_desc">Interfaz de usuario fluida para la gestión de <span
+                  style="color:#eeeeff;">restaurantes y comandas</span>. Desarrollada con React Native y Expo, enfocada
+                en la experiencia de usuario táctil.</span>
             </p>
             <div class="flex flex-wrap gap-2 mb-8">
-              <span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Problem Solving</span><span class="tag">UI/UX</span>
+              <span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Problem
+                Solving</span><span class="tag">UI/UX</span>
             </div>
             <button class="btn-details" onclick="openModal('p2')">
               <span data-i18n="view_details">Ver Detalles -></span>
@@ -610,17 +819,22 @@
             <div class="flex items-start justify-between mb-5">
               <div class="icon-box" style="background:rgba(255,0,200,0.07);border-color:rgba(255,0,200,0.2);">
                 <svg width="18" height="18" fill="none" stroke="#ff00c8" stroke-width="1.8" viewBox="0 0 24 24">
-                  <path d="M4 7V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3M9 22h6M12 18v4M4 11h16M4 15h16"/><rect x="2" y="7" width="20" height="11" rx="2"/>
+                  <path d="M4 7V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3M9 22h6M12 18v4M4 11h16M4 15h16" />
+                  <rect x="2" y="7" width="20" height="11" rx="2" />
                 </svg>
               </div>
               <span class="font-mono text-xs neon-mag">SQL / OPTIMIZATION</span>
             </div>
-            <h3 class="font-mono font-semibold mb-3" style="font-size:1.1rem;color:#eeeeff;" data-i18n="p3_name">Digitalización Telecom</h3>
+            <h3 class="font-mono font-semibold mb-3" style="font-size:1.1rem;color:#eeeeff;" data-i18n="p3_name">
+              Digitalización Telecom</h3>
             <p class="text-sm leading-relaxed mb-6" style="color:#7878a0;">
-              <span data-i18n="p3_desc">Optimización y estructuración de <span style="color:#eeeeff;">sistemas de inventario</span> y configuración de redes para el sector telecomunicaciones, utilizando arquitecturas SQL robustas.</span>
+              <span data-i18n="p3_desc">Optimización y estructuración de <span style="color:#eeeeff;">sistemas de
+                  inventario</span> y configuración de redes para el sector telecomunicaciones, utilizando arquitecturas
+                SQL robustas.</span>
             </p>
             <div class="flex flex-wrap gap-2 mb-8">
-              <span class="tag">Mikrotik</span><span class="tag">Cisco</span><span class="tag">Ubiquiti</span><span class="tag">Networking</span>
+              <span class="tag">Mikrotik</span><span class="tag">Cisco</span><span class="tag">Ubiquiti</span><span
+                class="tag">Networking</span>
             </div>
             <button class="btn-details" onclick="openModal('p3')">
               <span data-i18n="view_details">Ver Detalles -></span>
@@ -632,17 +846,22 @@
             <div class="flex items-start justify-between mb-5">
               <div class="icon-box" style="background:rgba(157,0,255,0.07);border-color:rgba(157,0,255,0.2);">
                 <svg width="18" height="18" fill="none" stroke="#9d00ff" stroke-width="1.8" viewBox="0 0 24 24">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/>
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" />
+                  <path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5" />
                 </svg>
               </div>
               <span class="font-mono text-xs" style="color:#9d00ff;">ACADEMIC</span>
             </div>
-            <h3 class="font-mono font-semibold mb-3" style="font-size:1.1rem;color:#eeeeff;" data-i18n="p4_name">Sistemas Académicos</h3>
+            <h3 class="font-mono font-semibold mb-3" style="font-size:1.1rem;color:#eeeeff;" data-i18n="p4_name">
+              Sistemas Académicos</h3>
             <p class="text-sm leading-relaxed mb-6" style="color:#7878a0;">
-              <span data-i18n="p4_desc">Gestores de inventario institucionales creados con <span style="color:#eeeeff;">Supabase y TailwindCSS</span>, facilitando la administración de recursos en entornos educativos.</span>
+              <span data-i18n="p4_desc">Gestores de inventario institucionales creados con <span
+                  style="color:#eeeeff;">Supabase y TailwindCSS</span>, facilitando la administración de recursos en
+                entornos educativos.</span>
             </p>
             <div class="flex flex-wrap gap-2 mb-8">
-              <span class="tag">Supabase</span><span class="tag">TailwindCSS</span><span class="tag">React</span><span class="tag">PostgreSQL</span>
+              <span class="tag">Supabase</span><span class="tag">TailwindCSS</span><span class="tag">React</span><span
+                class="tag">PostgreSQL</span>
             </div>
             <button class="btn-details" onclick="openModal('p4')">
               <span data-i18n="view_details">Ver Detalles -></span>
@@ -658,7 +877,8 @@
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
 
         <div class="reveal mb-14">
-          <p class="section-label mb-3" style="color:#9d00ff;"><span style="color:#44445a">$</span> <span data-i18n="dev_cmd">git status --active</span></p>
+          <p class="section-label mb-3" style="color:#9d00ff;"><span style="color:#44445a">$</span> <span
+              data-i18n="dev_cmd">git status --active</span></p>
           <h2 class="text-3xl sm:text-4xl font-bold" style="color:#eeeeff;">
             <span data-i18n="dev_title">En</span>
             <span class="neon-mag"> <span data-i18n="dev_title2">desarrollo</span></span>
@@ -671,20 +891,25 @@
             <div class="flex items-start justify-between mb-5">
               <div class="icon-box" style="background:rgba(255,0,200,0.1);border-color:rgba(255,0,200,0.3);">
                 <svg width="18" height="18" fill="none" stroke="#ff00c8" stroke-width="1.8" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               </div>
               <span class="font-mono text-xs flex items-center gap-1.5" style="color:#ff00c8;">
-                <span class="w-2 h-2 rounded-full animate-pulse" style="background:#ff00c8;box-shadow:0 0 6px #ff00c8;"></span>
+                <span class="w-2 h-2 rounded-full animate-pulse"
+                  style="background:#ff00c8;box-shadow:0 0 6px #ff00c8;"></span>
                 <span>IN_PROGRESS</span>
               </span>
             </div>
             <h3 class="font-mono font-semibold mb-3" style="font-size:1.2rem;color:#eeeeff;">Órbita Terminal</h3>
             <p class="text-sm leading-relaxed mb-6" style="color:#7878a0;">
-              <span data-i18n="dev1_desc">Juego narrativo de <span style="color:#eeeeff;">gestión 2.5D</span>. Actualmente en fase de diseño de documentos (GDD), conceptualización mecánica y generación de assets artísticos.</span>
+              <span data-i18n="dev1_desc">Juego narrativo de <span style="color:#eeeeff;">gestión 2.5D</span>.
+                Actualmente en fase de diseño de documentos (GDD), conceptualización mecánica y generación de assets
+                artísticos.</span>
             </p>
             <div class="flex flex-wrap gap-2 mb-8">
-              <span class="tag">GDD</span><span class="tag">2.5D</span><span class="tag">Linux Gaming</span><span class="tag">Assets</span>
+              <span class="tag">GDD</span><span class="tag">2.5D</span><span class="tag">Linux Gaming</span><span
+                class="tag">Assets</span>
             </div>
             <div class="flex items-center gap-3 text-xs font-mono" style="color:#44445a;">
               <span style="color:var(--magenta)">[</span>
@@ -701,7 +926,10 @@
     <div id="project-modal" class="modal-backdrop" onclick="closeModal(event)">
       <div class="modal-box cyber-card" onclick="event.stopPropagation()">
         <button class="modal-close" onclick="closeModal()">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
         </button>
         <div class="flex items-center gap-3 mb-4">
           <div class="tdot" style="background:#00ff87;box-shadow:0 0 6px #00ff87"></div>
@@ -709,13 +937,15 @@
         </div>
         <div class="divider mb-5"></div>
         <p id="modal-desc" class="text-sm leading-relaxed mb-6" style="color:#7878a0;">Desc</p>
-        
-        <h4 class="font-mono text-xs uppercase tracking-widest mb-3" style="color:#00fff0;" data-i18n="modal_feat">Características Clave</h4>
+
+        <h4 class="font-mono text-xs uppercase tracking-widest mb-3" style="color:#00fff0;" data-i18n="modal_feat">
+          Características Clave</h4>
         <ul id="modal-features" class="font-mono text-xs mb-6 flex flex-col gap-2" style="color:#eeeeff;">
         </ul>
 
         <div class="p-4 rounded" style="background:rgba(0,255,135,0.03);border:1px solid rgba(0,255,135,0.1);">
-          <h4 class="font-mono text-xs uppercase tracking-widest mb-2" style="color:#44445a;" data-i18n="modal_metrics">Métricas / Impacto</h4>
+          <h4 class="font-mono text-xs uppercase tracking-widest mb-2" style="color:#44445a;" data-i18n="modal_metrics">
+            Métricas / Impacto</h4>
           <p id="modal-metrics" class="text-sm font-mono" style="color:#00ff87;">Data</p>
         </div>
       </div>
@@ -740,15 +970,15 @@
 
       <!-- Goodbye text -->
       <p class="mb-3 leading-relaxed" style="color:#7878a0; font-size:0.9rem;" data-i18n="footer_text">
-        ¿Tienes un proyecto en mente o quieres hablar sobre tecnología?<br/>
+        ¿Tienes un proyecto en mente o quieres hablar sobre tecnología?<br />
         Estoy disponible para colaboraciones, freelance y nuevas oportunidades.
       </p>
 
       <!-- Single contact CTA -->
       <a href="mailto:contact@enmanuel.tech" class="btn-contact mt-8">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-          <polyline points="22,6 12,13 2,6"/>
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
         </svg>
         <span data-i18n="footer_btn">Enviar mensaje</span>
       </a>
@@ -756,10 +986,12 @@
       <div class="divider mt-12 mb-6"></div>
 
       <!-- Bottom bar -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-mono" style="color:#44445a;">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-mono"
+        style="color:#44445a;">
         <span>© 2026 José Enmanuel Cardoza</span>
         <div class="flex items-center gap-2">
-          <span class="w-1.5 h-1.5 rounded-full animate-pulse-slow" style="background:#00ff87;box-shadow:0 0 6px #00ff87;"></span>
+          <span class="w-1.5 h-1.5 rounded-full animate-pulse-slow"
+            style="background:#00ff87;box-shadow:0 0 6px #00ff87;"></span>
           <span data-i18n="footer_avail">disponible para proyectos</span>
         </div>
       </div>
@@ -770,295 +1002,300 @@
   <!-- ═══════════════════════════════════════════════ SCRIPTS ══ -->
   <script>
 
-  /* ════════════════════════ i18n dictionary ════════════════════════ */
-  const DICT = {
-    es: {
-      nav_featured: 'destacados',
-      nav_dev: 'en desarrollo',
-      nav_contact: 'contacto',
-      hero_cmd: 'ls -la ./projects_and_demos',
-      hero_title: 'Terminal de Proyectos',
-      hero_desc: 'Aquí se exhiben soluciones reales, desde sistemas de escritorio complejos hasta prototipos móviles fluidos y arquitecturas de bases de datos optimizadas. Cada línea de código está diseñada para la <span style="color:#eeeeff;">eficiencia y seguridad</span>.',
-      hero_cta1: 'Explorar Código',
-      hero_cta2: 'Laboratorio',
-      p_cmd: 'cat featured.json',
-      p_title: 'Proyectos',
-      p_title2: 'destacados',
-      p1_desc: 'Sistema maduro de inventario y punto de venta en desarrollo continuo desde 2023. Construido con <span style="color:#eeeeff;">Python y Flet</span>, destacando por su robusto sistema de licencias antipiratería y la creación de instaladores nativos para despliegue en Windows.',
-      p2_name: 'Prototipo Mobile POS',
-      p2_desc: 'Prototipo móvil desarrollado en <span style="color:#eeeeff;">React Native y Expo</span> para modernizar la gestión de un restaurante local. Diseñado específicamente para erradicar el seguimiento manual basado en PDF, agilizando comandas y mesas.',
-      p3_name: 'Infraestructura Telecom',
-      p3_desc: 'Digitalización de sistemas de inventario y configuración de redes corporativas. Experiencia práctica trabajando con infraestructuras y equipos <span style="color:#eeeeff;">Mikrotik, Cisco y Ubiquiti</span> para garantizar un rendimiento óptimo.',
-      p4_name: 'Sistemas Académicos',
-      p4_desc: 'Gestores de inventario institucionales creados con <span style="color:#eeeeff;">Supabase y TailwindCSS</span>, facilitando la administración de recursos en entornos educativos.',
-      view_repo: 'Repositorio',
-      view_details: 'Ver Detalles ->',
-      dev_cmd: 'git status --active',
-      dev_title: 'En',
-      dev_title2: 'desarrollo',
-      dev1_desc: 'Juego narrativo de <span style="color:#eeeeff;">gestión 2.5D</span>. Actualmente enfocado en la arquitectura del Game Design Document (GDD) y la generación de assets, desarrollado íntegramente sobre entorno MX Linux.',
-      dev1_status: 'Estado: Prototipado Conceptual',
-      footer_text: '¿Tienes un proyecto en mente o quieres hablar sobre tecnología?<br/>Estoy disponible para colaboraciones, freelance y nuevas oportunidades.',
-      footer_btn: 'Enviar mensaje',
-      footer_avail: 'disponible para proyectos',
-      modal_feat: 'Características Clave',
-      modal_metrics: 'Métricas / Impacto'
-    },
-    en: {
-      nav_featured: 'featured',
-      nav_dev: 'in development',
-      nav_contact: 'contact',
-      hero_cmd: 'ls -la ./projects_and_demos',
-      hero_title: 'Project Terminal',
-      hero_desc: 'Here real solutions are exhibited, from complex desktop systems to fluid mobile prototypes and optimized database architectures. Every line of code is designed for <span style="color:#eeeeff;">efficiency and security</span>.',
-      hero_cta1: 'Explore Code',
-      hero_cta2: 'Laboratory',
-      p_cmd: 'cat featured.json',
-      p_title: 'Featured',
-      p_title2: 'projects',
-      p1_desc: 'Mature inventory and POS system in continuous development since 2023. Built with <span style="color:#eeeeff;">Python and Flet</span>, standing out for its robust anti-piracy licensing system and the creation of native installers for Windows deployment.',
-      p2_name: 'Mobile POS Prototype',
-      p2_desc: 'Mobile prototype developed in <span style="color:#eeeeff;">React Native and Expo</span> to modernize a local restaurant\'s management. Specifically designed to eradicate manual PDF-based tracking, streamlining orders and tables.',
-      p3_name: 'Telecom Infrastructure',
-      p3_desc: 'Digitization of inventory systems and corporate network configuration. Hands-on experience working with <span style="color:#eeeeff;">Mikrotik, Cisco, and Ubiquiti</span> infrastructure and equipment to ensure optimal performance.',
-      p4_name: 'Academic Systems',
-      p4_desc: 'Institutional inventory managers created with <span style="color:#eeeeff;">Supabase and TailwindCSS</span>, facilitating resource administration in educational environments.',
-      view_repo: 'Repository',
-      view_details: 'View Details ->',
-      dev_cmd: 'git status --active',
-      dev_title: 'In',
-      dev_title2: 'development',
-      dev1_desc: '2.5D narrative <span style="color:#eeeeff;">management game</span>. Currently focused on the Game Design Document (GDD) architecture and asset generation, developed entirely on an MX Linux environment.',
-      dev1_status: 'Status: Conceptual Prototyping',
-      footer_text: 'Have a project in mind or want to talk about technology?<br/>I am available for collaborations, freelance, and new opportunities.',
-      footer_btn: 'Send message',
-      footer_avail: 'available for projects',
-      modal_feat: 'Key Features',
-      modal_metrics: 'Metrics / Impact'
-    }
-  };
-
-  /* ════════════════════════ Modal Data ════════════════════════ */
-  const PROJECT_DATA = {
-    p1: {
-      title: 'SisvenPOS',
+    /* ════════════════════════ i18n dictionary ════════════════════════ */
+    const DICT = {
       es: {
-        desc: 'Un sistema completo de gestión comercial diseñado para entornos de alta concurrencia. Destaca por su arquitectura modular y la implementación de un motor de licencias cifrado que previene copias no autorizadas del software en múltiples sucursales.',
-        features: ['Arquitectura Cliente-Servidor (Python/SQLite)', 'Cifrado AES-256 para bases de datos locales', 'Generación de licencias RSA offline', 'Reportes dinámicos y automatizados en PDF'],
-        metrics: 'Más de 50,000 transacciones procesadas. Reducción del 90% en piratería.'
+        nav_featured: 'destacados',
+        nav_dev: 'en desarrollo',
+        nav_contact: 'contacto',
+        hero_cmd: 'ls -la ./projects_and_demos',
+        hero_title: 'Terminal de Proyectos',
+        hero_desc: 'Aquí se exhiben soluciones reales, desde sistemas de escritorio complejos hasta prototipos móviles fluidos y arquitecturas de bases de datos optimizadas. Cada línea de código está diseñada para la <span style="color:#eeeeff;">eficiencia y seguridad</span>.',
+        hero_cta1: 'Explorar Código',
+        hero_cta2: 'Laboratorio',
+        p_cmd: 'cat featured.json',
+        p_title: 'Proyectos',
+        p_title2: 'destacados',
+        p1_desc: 'Sistema maduro de inventario y punto de venta en desarrollo continuo desde 2023. Construido con <span style="color:#eeeeff;">Python y Flet</span>, destacando por su robusto sistema de licencias antipiratería y la creación de instaladores nativos para despliegue en Windows.',
+        p2_name: 'Prototipo Mobile POS',
+        p2_desc: 'Prototipo móvil desarrollado en <span style="color:#eeeeff;">React Native y Expo</span> para modernizar la gestión de un restaurante local. Diseñado específicamente para erradicar el seguimiento manual basado en PDF, agilizando comandas y mesas.',
+        p3_name: 'Infraestructura Telecom',
+        p3_desc: 'Digitalización de sistemas de inventario y configuración de redes corporativas. Experiencia práctica trabajando con infraestructuras y equipos <span style="color:#eeeeff;">Mikrotik, Cisco y Ubiquiti</span> para garantizar un rendimiento óptimo.',
+        p4_name: 'Sistemas Académicos',
+        p4_desc: 'Gestores de inventario institucionales creados con <span style="color:#eeeeff;">Supabase y TailwindCSS</span>, facilitando la administración de recursos en entornos educativos.',
+        view_repo: 'Repositorio',
+        view_details: 'Ver Detalles ->',
+        dev_cmd: 'git status --active',
+        dev_title: 'En',
+        dev_title2: 'desarrollo',
+        dev1_desc: 'Juego narrativo de <span style="color:#eeeeff;">gestión 2.5D</span>. Actualmente enfocado en la arquitectura del Game Design Document (GDD) y la generación de assets, desarrollado íntegramente sobre entorno MX Linux.',
+        dev1_status: 'Estado: Prototipado Conceptual',
+        footer_text: '¿Tienes un proyecto en mente o quieres hablar sobre tecnología?<br/>Estoy disponible para colaboraciones, freelance y nuevas oportunidades.',
+        footer_btn: 'Enviar mensaje',
+        footer_avail: 'disponible para proyectos',
+        modal_feat: 'Características Clave',
+        modal_metrics: 'Métricas / Impacto'
       },
       en: {
-        desc: 'A complete commercial management system designed for high-concurrency environments. It stands out for its modular architecture and the implementation of an encrypted licensing engine that prevents unauthorized software copying across multiple branches.',
-        features: ['Client-Server Architecture (Python/SQLite)', 'AES-256 encryption for local databases', 'Offline RSA license generation', 'Dynamic and automated PDF reporting'],
-        metrics: 'Over 50,000 transactions processed. 90% reduction in software piracy.'
+        nav_featured: 'featured',
+        nav_dev: 'in development',
+        nav_contact: 'contact',
+        hero_cmd: 'ls -la ./projects_and_demos',
+        hero_title: 'Project Terminal',
+        hero_desc: 'Here real solutions are exhibited, from complex desktop systems to fluid mobile prototypes and optimized database architectures. Every line of code is designed for <span style="color:#eeeeff;">efficiency and security</span>.',
+        hero_cta1: 'Explore Code',
+        hero_cta2: 'Laboratory',
+        p_cmd: 'cat featured.json',
+        p_title: 'Featured',
+        p_title2: 'projects',
+        p1_desc: 'Mature inventory and POS system in continuous development since 2023. Built with <span style="color:#eeeeff;">Python and Flet</span>, standing out for its robust anti-piracy licensing system and the creation of native installers for Windows deployment.',
+        p2_name: 'Mobile POS Prototype',
+        p2_desc: 'Mobile prototype developed in <span style="color:#eeeeff;">React Native and Expo</span> to modernize a local restaurant\'s management. Specifically designed to eradicate manual PDF-based tracking, streamlining orders and tables.',
+        p3_name: 'Telecom Infrastructure',
+        p3_desc: 'Digitization of inventory systems and corporate network configuration. Hands-on experience working with <span style="color:#eeeeff;">Mikrotik, Cisco, and Ubiquiti</span> infrastructure and equipment to ensure optimal performance.',
+        p4_name: 'Academic Systems',
+        p4_desc: 'Institutional inventory managers created with <span style="color:#eeeeff;">Supabase and TailwindCSS</span>, facilitating resource administration in educational environments.',
+        view_repo: 'Repository',
+        view_details: 'View Details ->',
+        dev_cmd: 'git status --active',
+        dev_title: 'In',
+        dev_title2: 'development',
+        dev1_desc: '2.5D narrative <span style="color:#eeeeff;">management game</span>. Currently focused on the Game Design Document (GDD) architecture and asset generation, developed entirely on an MX Linux environment.',
+        dev1_status: 'Status: Conceptual Prototyping',
+        footer_text: 'Have a project in mind or want to talk about technology?<br/>I am available for collaborations, freelance, and new opportunities.',
+        footer_btn: 'Send message',
+        footer_avail: 'available for projects',
+        modal_feat: 'Key Features',
+        modal_metrics: 'Metrics / Impact'
       }
-    },
-    p2: {
-      title: 'Prototipo Mobile POS',
-      es: {
-        desc: 'Una aplicación móvil de alto rendimiento que reemplaza los obsoletos sistemas de toma de pedidos en papel y PDF. Provee sincronización instantánea entre los meseros y el área de cocina, mejorando el flujo de trabajo del restaurante.',
-        features: ['Sincronización en tiempo real vía WebSockets', 'Soporte Offline-First para zonas sin Wi-Fi', 'Diseño UX minimalista y basado en gestos', 'Integración con impresoras térmicas Bluetooth'],
-        metrics: 'Mejora del 40% en velocidad de toma de pedidos.'
-      },
-      en: {
-        desc: 'A high-performance mobile app that replaces obsolete paper and PDF order-taking systems. It provides instant synchronization between waiters and the kitchen area, improving the restaurant\'s workflow.',
-        features: ['Real-time synchronization via WebSockets', 'Offline-First support for no-WiFi zones', 'Minimalist, gesture-based UX design', 'Integration with Bluetooth thermal printers'],
-        metrics: '40% improvement in order taking speed.'
-      }
-    },
-    p3: {
-      title: 'Infraestructura Telecom',
-      es: {
-        desc: 'Proyecto corporativo centrado en la modernización de la infraestructura de red. Se implementaron políticas estrictas de seguridad y scripts automatizados para el respaldo de configuraciones de enrutadores en diferentes zonas geográficas.',
-        features: ['Scripts automatizados para backups en Mikrotik', 'Monitorización SNMP centralizada', 'Firewalls con políticas Zero-Trust', 'Gestión de VLANs dinámicas'],
-        metrics: 'Uptime del 99.9% garantizado en la red core. 500+ equipos gestionados.'
-      },
-      en: {
-        desc: 'Corporate project focused on network infrastructure modernization. Strict security policies and automated scripts were implemented for backing up router configurations across different geographical zones.',
-        features: ['Automated backup scripts for Mikrotik', 'Centralized SNMP monitoring', 'Zero-Trust policy firewalls', 'Dynamic VLAN management'],
-        metrics: '99.9% guaranteed uptime on the core network. 500+ managed devices.'
-      }
-    },
-    p4: {
-      title: 'Sistemas Académicos',
-      es: {
-        desc: 'Plataforma web escalable desarrollada para instituciones educativas. Centraliza la administración de inventarios de laboratorio, préstamos de equipos y gestión de perfiles de usuario con un backend cloud-native.',
-        features: ['Autenticación JWT y Control de Roles', 'Dashboards analíticos interactivos', 'APIs RESTful de alto rendimiento', 'Arquitectura Serverless con Supabase'],
-        metrics: 'Implementado en 3 facultades. +1,200 estudiantes registrados.'
-      },
-      en: {
-        desc: 'Scalable web platform developed for educational institutions. It centralizes laboratory inventory administration, equipment loans, and user profile management with a cloud-native backend.',
-        features: ['JWT Authentication and Role-Based Access', 'Interactive analytical dashboards', 'High-performance RESTful APIs', 'Serverless architecture with Supabase'],
-        metrics: 'Implemented in 3 faculties. +1,200 registered students.'
-      }
-    }
-  };
+    };
 
-  /* ════════════════════════ i18n engine ════════════════════════ */
-  let currentLang = 'es';
-
-  function applyLang(lang) {
-    currentLang = lang;
-    document.documentElement.lang = lang;
-    const d = DICT[lang];
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.dataset.i18n;
-      if (d[key] !== undefined) el.innerHTML = d[key];
-    });
-
-    /* Update typewriter phrases */
-    TW_LINES = lang === 'es' ? TW_ES : TW_EN;
-
-    /* Update lang button labels */
-    const label = lang === 'es' ? 'EN' : 'ES';
-    document.querySelectorAll('#lang-toggle, #lang-toggle-m').forEach(b => b.textContent = label);
-    if(typeof updateModalContent === 'function') updateModalContent();
-  }
-
-  function toggleLang() {
-    applyLang(currentLang === 'es' ? 'en' : 'es');
-  }
-
-  /* ════════════════════ Mobile menu ════════════════════ */
-  const menuBtn    = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const iconOpen   = document.getElementById('icon-open');
-  const iconClose  = document.getElementById('icon-close');
-
-  menuBtn.addEventListener('click', () => {
-    const isOpen = !mobileMenu.classList.contains('hidden');
-    mobileMenu.classList.toggle('hidden', isOpen);
-    iconOpen.classList.toggle('hidden', !isOpen);
-    iconClose.classList.toggle('hidden', isOpen);
-  });
-  function closeMobileMenu() {
-    mobileMenu.classList.add('hidden');
-    iconOpen.classList.remove('hidden');
-    iconClose.classList.add('hidden');
-  }
-
-  /* ════════════════════ Scroll reveal ════════════════════ */
-  const revealObs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
-    });
-  }, { threshold: 0.09 });
-  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-  /* ════════════════════ Active nav ════════════════════ */
-  const navObs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        document.querySelectorAll('a.nav-link').forEach(l => {
-          l.style.color = l.getAttribute('href') === `#${e.target.id}` ? '#00ff87' : '';
-        });
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-  document.querySelectorAll('section[id], footer[id]').forEach(s => navObs.observe(s));
-
-  /* ════════════════════ Modal Logic ════════════════════ */
-  const modal = document.getElementById('project-modal');
-  let currentProject = null;
-
-  function openModal(projectId) {
-    currentProject = projectId;
-    updateModalContent();
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal(e) {
-    if(e && e.target !== modal && !e.target.closest('.modal-close')) return;
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  function updateModalContent() {
-    if(!currentProject) return;
-    const data = PROJECT_DATA[currentProject];
-    const langData = data[currentLang];
-    
-    document.getElementById('modal-title').textContent = data.title;
-    document.getElementById('modal-desc').innerHTML = langData.desc;
-    
-    const ul = document.getElementById('modal-features');
-    ul.innerHTML = langData.features.map(f => `<li class="flex items-start gap-2"><span style="color:#00fff0">▸</span> <span>${f}</span></li>`).join('');
-    
-    document.getElementById('modal-metrics').textContent = '> ' + langData.metrics;
-  }
-
-  /* ════════════════════ Canvas particles ════════════════════ */
-  (function () {
-    const canvas = document.getElementById('particles');
-    const ctx = canvas.getContext('2d');
-    const COLORS = ['#00ff87','#00fff0','#ff00c8','#9d00ff'];
-    const N = 65;
-    let W, H, pts = [];
-
-    function resize() {
-      const hero = document.getElementById('hero-portfolio');
-      if(!hero) return;
-      W = canvas.width  = hero.offsetWidth;
-      H = canvas.height = hero.offsetHeight;
-    }
-    function mkPt() {
-      return { x: Math.random()*W, y: Math.random()*H,
-               vx: (Math.random()-.5)*.3, vy: (Math.random()-.5)*.3,
-               r: Math.random()*1.3+.4, c: COLORS[Math.random()*COLORS.length|0],
-               a: Math.random()*.5+.15 };
-    }
-    function frame() {
-      ctx.clearRect(0,0,W,H);
-      for (let i=0;i<N;i++) {
-        const p=pts[i];
-        p.x+=p.vx; p.y+=p.vy;
-        if(p.x<0)p.x=W; if(p.x>W)p.x=0;
-        if(p.y<0)p.y=H; if(p.y>H)p.y=0;
-        for (let j=i+1;j<N;j++) {
-          const q=pts[j], dx=p.x-q.x, dy=p.y-q.y, d=Math.sqrt(dx*dx+dy*dy);
-          if(d<110){ ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y);
-            ctx.strokeStyle=p.c; ctx.globalAlpha=(1-d/110)*.1; ctx.lineWidth=.5; ctx.stroke(); }
+    /* ════════════════════════ Modal Data ════════════════════════ */
+    const PROJECT_DATA = {
+      p1: {
+        title: 'SisvenPOS',
+        es: {
+          desc: 'Un sistema completo de gestión comercial diseñado para entornos de alta concurrencia. Destaca por su arquitectura modular y la implementación de un motor de licencias cifrado que previene copias no autorizadas del software en múltiples sucursales.',
+          features: ['Arquitectura Cliente-Servidor (Python/SQLite)', 'Cifrado AES-256 para bases de datos locales', 'Generación de licencias RSA offline', 'Reportes dinámicos y automatizados en PDF'],
+          metrics: 'Más de 50,000 transacciones procesadas. Reducción del 90% en piratería.'
+        },
+        en: {
+          desc: 'A complete commercial management system designed for high-concurrency environments. It stands out for its modular architecture and the implementation of an encrypted licensing engine that prevents unauthorized software copying across multiple branches.',
+          features: ['Client-Server Architecture (Python/SQLite)', 'AES-256 encryption for local databases', 'Offline RSA license generation', 'Dynamic and automated PDF reporting'],
+          metrics: 'Over 50,000 transactions processed. 90% reduction in software piracy.'
         }
-        ctx.globalAlpha=p.a; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fillStyle=p.c; ctx.shadowBlur=5; ctx.shadowColor=p.c; ctx.fill(); ctx.shadowBlur=0;
+      },
+      p2: {
+        title: 'Prototipo Mobile POS',
+        es: {
+          desc: 'Una aplicación móvil de alto rendimiento que reemplaza los obsoletos sistemas de toma de pedidos en papel y PDF. Provee sincronización instantánea entre los meseros y el área de cocina, mejorando el flujo de trabajo del restaurante.',
+          features: ['Sincronización en tiempo real vía WebSockets', 'Soporte Offline-First para zonas sin Wi-Fi', 'Diseño UX minimalista y basado en gestos', 'Integración con impresoras térmicas Bluetooth'],
+          metrics: 'Mejora del 40% en velocidad de toma de pedidos.'
+        },
+        en: {
+          desc: 'A high-performance mobile app that replaces obsolete paper and PDF order-taking systems. It provides instant synchronization between waiters and the kitchen area, improving the restaurant\'s workflow.',
+          features: ['Real-time synchronization via WebSockets', 'Offline-First support for no-WiFi zones', 'Minimalist, gesture-based UX design', 'Integration with Bluetooth thermal printers'],
+          metrics: '40% improvement in order taking speed.'
+        }
+      },
+      p3: {
+        title: 'Infraestructura Telecom',
+        es: {
+          desc: 'Proyecto corporativo centrado en la modernización de la infraestructura de red. Se implementaron políticas estrictas de seguridad y scripts automatizados para el respaldo de configuraciones de enrutadores en diferentes zonas geográficas.',
+          features: ['Scripts automatizados para backups en Mikrotik', 'Monitorización SNMP centralizada', 'Firewalls con políticas Zero-Trust', 'Gestión de VLANs dinámicas'],
+          metrics: 'Uptime del 99.9% garantizado en la red core. 500+ equipos gestionados.'
+        },
+        en: {
+          desc: 'Corporate project focused on network infrastructure modernization. Strict security policies and automated scripts were implemented for backing up router configurations across different geographical zones.',
+          features: ['Automated backup scripts for Mikrotik', 'Centralized SNMP monitoring', 'Zero-Trust policy firewalls', 'Dynamic VLAN management'],
+          metrics: '99.9% guaranteed uptime on the core network. 500+ managed devices.'
+        }
+      },
+      p4: {
+        title: 'Sistemas Académicos',
+        es: {
+          desc: 'Plataforma web escalable desarrollada para instituciones educativas. Centraliza la administración de inventarios de laboratorio, préstamos de equipos y gestión de perfiles de usuario con un backend cloud-native.',
+          features: ['Autenticación JWT y Control de Roles', 'Dashboards analíticos interactivos', 'APIs RESTful de alto rendimiento', 'Arquitectura Serverless con Supabase'],
+          metrics: 'Implementado en 3 facultades. +1,200 estudiantes registrados.'
+        },
+        en: {
+          desc: 'Scalable web platform developed for educational institutions. It centralizes laboratory inventory administration, equipment loans, and user profile management with a cloud-native backend.',
+          features: ['JWT Authentication and Role-Based Access', 'Interactive analytical dashboards', 'High-performance RESTful APIs', 'Serverless architecture with Supabase'],
+          metrics: 'Implemented in 3 faculties. +1,200 registered students.'
+        }
       }
-      ctx.globalAlpha=1;
-      requestAnimationFrame(frame);
-    }
-    window.addEventListener('resize', resize);
-    resize(); pts = Array.from({length:N}, mkPt); frame();
-  })();
+    };
 
-  /* ════════════════════ Typewriter ════════════════════ */
-  const TW_ES = [
-    'desktop_apps.build()',
-    'mobile_prototypes.init()',
-    'database_architect.deploy()',
-    'security_first.run()',
-  ];
-  const TW_EN = [
-    'desktop_apps.build()',
-    'mobile_prototypes.init()',
-    'database_architect.deploy()',
-    'security_first.run()',
-  ];
-  let TW_LINES = TW_ES;
+    /* ════════════════════════ i18n engine ════════════════════════ */
+    let currentLang = 'es';
 
-  (function () {
-    const el = document.getElementById('typewriter');
-    let li=0, ci=0, del=false;
-    const CUR = '<span style="color:#00ff87;animation:blink 1.1s step-end infinite">|</span>';
-    function tick() {
-      const line = TW_LINES[li % TW_LINES.length];
-      if (!del) { ci++; el.innerHTML=line.slice(0,ci)+CUR; if(ci===line.length){del=true;setTimeout(tick,1900);return;} }
-      else       { ci--; el.innerHTML=line.slice(0,ci)+CUR; if(ci===0){del=false;li++;setTimeout(tick,380);return;} }
-      setTimeout(tick, del?38:72);
+    function applyLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      const d = DICT[lang];
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (d[key] !== undefined) el.innerHTML = d[key];
+      });
+
+      /* Update typewriter phrases */
+      TW_LINES = lang === 'es' ? TW_ES : TW_EN;
+
+      /* Update lang button labels */
+      const label = lang === 'es' ? 'EN' : 'ES';
+      document.querySelectorAll('#lang-toggle, #lang-toggle-m').forEach(b => b.textContent = label);
+      if (typeof updateModalContent === 'function') updateModalContent();
     }
-    setTimeout(tick, 700);
-  })();
+
+    function toggleLang() {
+      applyLang(currentLang === 'es' ? 'en' : 'es');
+    }
+
+    /* ════════════════════ Mobile menu ════════════════════ */
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', isOpen);
+      iconOpen.classList.toggle('hidden', !isOpen);
+      iconClose.classList.toggle('hidden', isOpen);
+    });
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+
+    /* ════════════════════ Scroll reveal ════════════════════ */
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.09 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    /* ════════════════════ Active nav ════════════════════ */
+    const navObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          document.querySelectorAll('a.nav-link').forEach(l => {
+            l.style.color = l.getAttribute('href') === `#${e.target.id}` ? '#00ff87' : '';
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    document.querySelectorAll('section[id], footer[id]').forEach(s => navObs.observe(s));
+
+    /* ════════════════════ Modal Logic ════════════════════ */
+    const modal = document.getElementById('project-modal');
+    let currentProject = null;
+
+    function openModal(projectId) {
+      currentProject = projectId;
+      updateModalContent();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(e) {
+      if (e && e.target !== modal && !e.target.closest('.modal-close')) return;
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function updateModalContent() {
+      if (!currentProject) return;
+      const data = PROJECT_DATA[currentProject];
+      const langData = data[currentLang];
+
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-desc').innerHTML = langData.desc;
+
+      const ul = document.getElementById('modal-features');
+      ul.innerHTML = langData.features.map(f => `<li class="flex items-start gap-2"><span style="color:#00fff0">▸</span> <span>${f}</span></li>`).join('');
+
+      document.getElementById('modal-metrics').textContent = '> ' + langData.metrics;
+    }
+
+    /* ════════════════════ Canvas particles ════════════════════ */
+    (function () {
+      const canvas = document.getElementById('particles');
+      const ctx = canvas.getContext('2d');
+      const COLORS = ['#00ff87', '#00fff0', '#ff00c8', '#9d00ff'];
+      const N = 65;
+      let W, H, pts = [];
+
+      function resize() {
+        const hero = document.getElementById('hero-portfolio');
+        if (!hero) return;
+        W = canvas.width = hero.offsetWidth;
+        H = canvas.height = hero.offsetHeight;
+      }
+      function mkPt() {
+        return {
+          x: Math.random() * W, y: Math.random() * H,
+          vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3,
+          r: Math.random() * 1.3 + .4, c: COLORS[Math.random() * COLORS.length | 0],
+          a: Math.random() * .5 + .15
+        };
+      }
+      function frame() {
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < N; i++) {
+          const p = pts[i];
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+          if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+          for (let j = i + 1; j < N; j++) {
+            const q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 110) {
+              ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
+              ctx.strokeStyle = p.c; ctx.globalAlpha = (1 - d / 110) * .1; ctx.lineWidth = .5; ctx.stroke();
+            }
+          }
+          ctx.globalAlpha = p.a; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.c; ctx.shadowBlur = 5; ctx.shadowColor = p.c; ctx.fill(); ctx.shadowBlur = 0;
+        }
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(frame);
+      }
+      window.addEventListener('resize', resize);
+      resize(); pts = Array.from({ length: N }, mkPt); frame();
+    })();
+
+    /* ════════════════════ Typewriter ════════════════════ */
+    const TW_ES = [
+      'desktop_apps.build()',
+      'mobile_prototypes.init()',
+      'database_architect.deploy()',
+      'security_first.run()',
+    ];
+    const TW_EN = [
+      'desktop_apps.build()',
+      'mobile_prototypes.init()',
+      'database_architect.deploy()',
+      'security_first.run()',
+    ];
+    let TW_LINES = TW_ES;
+
+    (function () {
+      const el = document.getElementById('typewriter');
+      let li = 0, ci = 0, del = false;
+      const CUR = '<span style="color:#00ff87;animation:blink 1.1s step-end infinite">|</span>';
+      function tick() {
+        const line = TW_LINES[li % TW_LINES.length];
+        if (!del) { ci++; el.innerHTML = line.slice(0, ci) + CUR; if (ci === line.length) { del = true; setTimeout(tick, 1900); return; } }
+        else { ci--; el.innerHTML = line.slice(0, ci) + CUR; if (ci === 0) { del = false; li++; setTimeout(tick, 380); return; } }
+        setTimeout(tick, del ? 38 : 72);
+      }
+      setTimeout(tick, 700);
+    })();
 
   </script>
 </body>
+
 </html>
