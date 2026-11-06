@@ -667,6 +667,7 @@
       <!-- Desktop nav + lang switcher -->
       <div class="hidden sm:flex items-center gap-7">
         <a href="#destacados" class="nav-link" data-i18n="nav_featured">comerciales</a>
+        <a href="#sistemas-web" class="nav-link" data-i18n="nav_web">sistemas web</a>
         <a href="#en-desarrollo" class="nav-link" data-i18n="nav_dev">en desarrollo</a>
         <a href="#archivo" class="nav-link" data-i18n="nav_archive">archivo</a>
         <a href="#footer" class="nav-link" data-i18n="nav_contact">contacto</a>
@@ -696,6 +697,7 @@
     <div id="mobile-menu" class="hidden sm:hidden px-5 pb-5 pt-3 flex flex-col gap-4"
       style="background:rgba(8,8,16,0.98);border-top:1px solid rgba(0,255,240,0.06);">
       <a href="#destacados" class="nav-link text-sm" data-i18n="nav_featured" onclick="closeMobileMenu()">comerciales</a>
+      <a href="#sistemas-web" class="nav-link text-sm" data-i18n="nav_web" onclick="closeMobileMenu()">sistemas web</a>
       <a href="#en-desarrollo" class="nav-link text-sm" data-i18n="nav_dev" onclick="closeMobileMenu()">en desarrollo</a>
       <a href="#archivo" class="nav-link text-sm" data-i18n="nav_archive" onclick="closeMobileMenu()">archivo</a>
       <a href="#footer" class="nav-link text-sm" data-i18n="nav_contact" onclick="closeMobileMenu()">contacto</a>
@@ -747,9 +749,9 @@
 
         <!-- Bio / Description -->
         <p class="max-w-2xl leading-relaxed mb-10" style="color:#7878a0;font-size:1rem;">
-          <span data-i18n="hero_desc">Aquí se exhiben soluciones reales, desde sistemas de escritorio complejos hasta
-            prototipos móviles fluidos y arquitecturas de bases de datos optimizadas. Cada línea de código está diseñada
-            para la <span style="color:#eeeeff;">eficiencia y seguridad</span>.</span>
+          <span data-i18n="hero_desc">Portafolio de ingeniería de software y sistemas en producción. Soluciones de
+            escritorio multi-terminal, plataformas web institucionales en React + Supabase, arquitecturas móviles
+            offline-first y desarrollo de videojuegos con <span style="color:#eeeeff;">rigor técnico</span>.</span>
         </p>
 
         <!-- CTAs -->
@@ -882,6 +884,214 @@
             </div>
 
             <button type="button" class="btn-details" onclick="openModal('distquesos')">
+              <span data-i18n="view_details">Ver Detalles -></span>
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════ SISTEMAS WEB & GESTIÓN ══ -->
+    <section id="sistemas-web" class="py-24" style="border-top:1px solid rgba(0,255,240,0.07);">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+        <div class="reveal mb-14">
+          <p class="section-label mb-3"><span style="color:#44445a">$</span> <span data-i18n="web_cmd">cat web_platforms.json</span></p>
+          <h2 class="text-3xl sm:text-4xl font-bold" style="color:#eeeeff;">
+            <span data-i18n="web_title">Sistemas</span>
+            <span class="neon-cyan"> <span data-i18n="web_title2">web & gestión</span></span>
+          </h2>
+          <p class="text-sm mt-3 max-w-xl font-mono" style="color:#7878a0;" data-i18n="web_subtitle">
+            Aplicaciones full-stack sobre React + Supabase para operación institucional, comercial y académica.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- FiberTech Sales System -->
+          <article class="project-card cyber-card reveal" style="transition-delay:0.05s;">
+            <div class="relative overflow-hidden rounded mb-5 border border-[rgba(0,255,135,0.25)] group cursor-pointer bg-[#090914]" onclick="openModal('fibertech')">
+              <img src="fibertech.png" alt="FiberTech Sales System Interface Preview" class="w-full h-48 object-cover object-top transition duration-500 group-hover:scale-105 group-hover:brightness-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e1a] via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2 font-mono text-[11px] px-2.5 py-1 rounded bg-black/80 text-[#00ff87] border border-[#00ff87]/30 backdrop-blur-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#00ff87] animate-pulse"></span>
+                <span>Admin Dashboard UI</span>
+              </div>
+            </div>
+
+            <div class="flex items-start justify-between mb-4">
+              <div class="icon-box">
+                <svg width="18" height="18" fill="none" stroke="#00ff87" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M22 7l-8.5 8.5-5-5L2 17" />
+                  <path d="M16 7h6v6" />
+                </svg>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-[#00ff87]/10 text-[#00ff87] border border-[#00ff87]/20">B2B SUITE</span>
+                <span class="font-mono text-xs flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full animate-pulse-slow" style="background:#00ff87;box-shadow:0 0 6px #00ff87;"></span>
+                  <span class="neon-green">DELIVERED</span>
+                </span>
+              </div>
+            </div>
+
+            <h3 class="font-mono font-semibold mb-2" style="font-size:1.25rem;color:#eeeeff;">FiberTech Sales System <span class="text-xs" style="color:#44445a;">// 2025-07</span></h3>
+            <p class="text-sm leading-relaxed mb-6" style="color:#7878a0;">
+              <span data-i18n="fibertech_card_desc">Suite de gestión comercial con dashboard analítico en tiempo real, gamificación por rankings, comisiones automáticas y control de acceso por roles con auditoría completa.</span>
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="tag">React 18</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Recharts</span>
+              <span class="tag">shadcn/ui</span>
+              <span class="tag">RBAC</span>
+            </div>
+
+            <button type="button" class="btn-details" onclick="openModal('fibertech')">
+              <span data-i18n="view_details">Ver Detalles -></span>
+            </button>
+          </article>
+
+          <!-- Gestión de Personal Pampanito -->
+          <article class="project-card cyber-card reveal" style="transition-delay:0.1s;">
+            <div class="relative overflow-hidden rounded mb-5 border border-[rgba(0,255,240,0.25)] group cursor-pointer bg-[#090914]" onclick="openModal('rrhh')">
+              <img src="rrhh.png" alt="Gestión de Personal Pampanito Interface Preview" class="w-full h-48 object-cover object-top transition duration-500 group-hover:scale-105 group-hover:brightness-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e1a] via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2 font-mono text-[11px] px-2.5 py-1 rounded bg-black/80 text-[#00fff0] border border-[#00fff0]/30 backdrop-blur-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#00fff0] animate-pulse"></span>
+                <span>HR Dashboard UI</span>
+              </div>
+            </div>
+
+            <div class="flex items-start justify-between mb-4">
+              <div class="icon-box" style="background:rgba(0,255,240,0.07);border-color:rgba(0,255,240,0.2);">
+                <svg width="18" height="18" fill="none" stroke="#00fff0" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-[#00fff0]/10 text-[#00fff0] border border-[#00fff0]/20">GOV SYSTEM</span>
+                <span class="font-mono text-xs flex items-center gap-1.5 text-[#00fff0]">
+                  <span class="w-2 h-2 rounded-full animate-pulse-slow" style="background:#00fff0;box-shadow:0 0 6px #00fff0;"></span>
+                  <span>DEPLOYED</span>
+                </span>
+              </div>
+            </div>
+
+            <h3 class="font-mono font-semibold mb-2" style="font-size:1.25rem;color:#eeeeff;">Gestión de Personal — Pampanito <span class="text-xs" style="color:#44445a;">// 2025-05</span></h3>
+            <p class="text-sm leading-relaxed mb-6" style="color:#7878a0;">
+              <span data-i18n="rrhh_card_desc">Sistema de talento humano para la Alcaldía de Pampanito: empleados, departamentos, asistencia en calendario mensual y marcaciones de entrada/salida con cálculo automático de horas.</span>
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="tag">React 18</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">React Query</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">PostgreSQL RLS</span>
+              <span class="tag">Scrum</span>
+            </div>
+
+            <button type="button" class="btn-details" onclick="openModal('rrhh')">
+              <span data-i18n="view_details">Ver Detalles -></span>
+            </button>
+          </article>
+
+          <!-- Cobranza Pampán -->
+          <article class="project-card cyber-card reveal" style="transition-delay:0.15s;">
+            <div class="relative overflow-hidden rounded mb-5 border border-[rgba(255,0,200,0.25)] group cursor-pointer bg-[#090914]" onclick="openModal('cobranza')">
+              <img src="cobranza.png" alt="Sistema de Cobranza Pampán Interface Preview" class="w-full h-48 object-cover object-top transition duration-500 group-hover:scale-105 group-hover:brightness-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e1a] via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2 font-mono text-[11px] px-2.5 py-1 rounded bg-black/80 text-[#ff00c8] border border-[#ff00c8]/30 backdrop-blur-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#ff00c8] animate-pulse"></span>
+                <span>Dashboard UI</span>
+              </div>
+            </div>
+
+            <div class="flex items-start justify-between mb-4">
+              <div class="icon-box" style="background:rgba(255,0,200,0.07);border-color:rgba(255,0,200,0.2);">
+                <svg width="18" height="18" fill="none" stroke="#ff00c8" stroke-width="1.8" viewBox="0 0 24 24">
+                  <line x1="3" y1="22" x2="21" y2="22" />
+                  <line x1="6" y1="18" x2="6" y2="11" />
+                  <line x1="10" y1="18" x2="10" y2="11" />
+                  <line x1="14" y1="18" x2="14" y2="11" />
+                  <line x1="18" y1="18" x2="18" y2="11" />
+                  <polygon points="12 2 20 7 4 7" />
+                </svg>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-[#ff00c8]/10 text-[#ff00c8] border border-[#ff00c8]/20">GOV SYSTEM</span>
+                <span class="font-mono text-xs flex items-center gap-1.5" style="color:#ff00c8;">
+                  <span class="w-2 h-2 rounded-full animate-pulse-slow" style="background:#ff00c8;box-shadow:0 0 6px #ff00c8;"></span>
+                  <span>DELIVERED</span>
+                </span>
+              </div>
+            </div>
+
+            <h3 class="font-mono font-semibold mb-2" style="font-size:1.25rem;color:#eeeeff;">Sistema de Cobranza — Pampán <span class="text-xs" style="color:#44445a;">// 2025-05</span></h3>
+            <p class="text-sm leading-relaxed mb-6" style="color:#7878a0;">
+              <span data-i18n="cobranza_card_desc">Plataforma tributaria para la Alcaldía de Pampán: padrón de contribuyentes, catálogo de contribuciones y registro de pagos con conversión automática de divisa y reportes imprimibles.</span>
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Multi-Currency</span>
+              <span class="tag">Print Reports</span>
+            </div>
+
+            <button type="button" class="btn-details" onclick="openModal('cobranza')">
+              <span data-i18n="view_details">Ver Detalles -></span>
+            </button>
+          </article>
+
+          <!-- Bookworm -->
+          <article class="project-card cyber-card reveal" style="transition-delay:0.2s;">
+            <div class="relative overflow-hidden rounded mb-5 border border-[rgba(157,0,255,0.3)] group cursor-pointer bg-[#090914]" onclick="openModal('bookworm')">
+              <img src="bookworm.png" alt="Bookworm Interface Preview" class="w-full h-48 object-cover object-top transition duration-500 group-hover:scale-105 group-hover:brightness-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e1a] via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2 font-mono text-[11px] px-2.5 py-1 rounded bg-black/80 text-[#9d00ff] border border-[#9d00ff]/30 backdrop-blur-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#9d00ff] animate-pulse"></span>
+                <span>Web UI</span>
+              </div>
+            </div>
+
+            <div class="flex items-start justify-between mb-4">
+              <div class="icon-box" style="background:rgba(157,0,255,0.07);border-color:rgba(157,0,255,0.25);">
+                <svg width="18" height="18" fill="none" stroke="#9d00ff" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-[#9d00ff]/10 text-[#9d00ff] border border-[#9d00ff]/20">ACADEMIC</span>
+                <span class="font-mono text-xs flex items-center gap-1.5" style="color:#9d00ff;">
+                  <span class="w-2 h-2 rounded-full animate-pulse-slow" style="background:#9d00ff;box-shadow:0 0 6px #9d00ff;"></span>
+                  <span>LIVE</span>
+                </span>
+              </div>
+            </div>
+
+            <h3 class="font-mono font-semibold mb-2" style="font-size:1.25rem;color:#eeeeff;">Bookworm <span class="text-xs" style="color:#44445a;">// 2025-04</span></h3>
+            <p class="text-sm leading-relaxed mb-6" style="color:#7878a0;">
+              <span data-i18n="bookworm_card_desc">Gestión de colección de libros y autores con relación N:M, integridad referencial aplicada a nivel de base de datos e interfaz responsive.</span>
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Bootstrap 5</span>
+            </div>
+
+            <button type="button" class="btn-details" onclick="openModal('bookworm')">
               <span data-i18n="view_details">Ver Detalles -></span>
             </button>
           </article>
@@ -1077,7 +1287,7 @@
                     <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80 inline-block"></span>
                     <span class="w-2.5 h-2.5 rounded-full bg-green-500/80 inline-block"></span>
                   </div>
-                  <span class="text-[10px] text-[#00ff87]">terminal://sisvenpos_v1.2.5</span>
+                  <span id="modal-frame-label" class="text-[10px] text-[#00ff87]">terminal://sisvenpos_v1.2.5</span>
                 </div>
                 <div class="p-2 bg-black/60 flex justify-center">
                   <img id="modal-img-desktop" src="" alt="Captura SisvenPOS" class="rounded object-contain w-full max-h-[360px]">
@@ -1182,12 +1392,13 @@
     const DICT = {
       es: {
         nav_featured: 'comerciales',
+        nav_web: 'sistemas web',
         nav_dev: 'en desarrollo',
         nav_archive: 'archivo',
         nav_contact: 'contacto',
         hero_cmd: 'ls -la ./commercial_systems',
         hero_title: 'Terminal de Proyectos',
-        hero_desc: 'Portafolio de ingeniería de software y sistemas en producción. Soluciones de escritorio multi-terminal, arquitecturas móviles offline-first con cobranza en ruta y desarrollo de videojuegos con rigor técnico.',
+        hero_desc: 'Portafolio de ingeniería de software y sistemas en producción. Soluciones de escritorio multi-terminal, plataformas web institucionales en React + Supabase, arquitecturas móviles offline-first y desarrollo de videojuegos con rigor técnico.',
         hero_cta1: 'Ver Sistemas',
         hero_cta2: 'Laboratorio',
         p_cmd: 'cat commercial_systems.json',
@@ -1196,6 +1407,14 @@
         p_subtitle: 'Soluciones de software propietarias en producción activa, operando en clientes reales con modelos de licenciamiento y suscripción B2B.',
         sisven_card_desc: 'Sistema integral de Punto de Venta (POS) y ERP con arquitectura LAN reactiva, facturación bimonetaria en tiempo real (USD/Bs con regla BCV 17:00), emulación térmica 203 DPI y blindaje de seguridad compilado en Cython con Machine ID.',
         distquesos_card_desc: 'Plataforma móvil nativa (Kotlin/Compose) para distribución comercial y cobranza en ruta. Diseñada bajo arquitectura Offline-First para operar sin internet en calle y monetizada activamente bajo suscripción mensual.',
+        web_cmd: 'cat web_platforms.json',
+        web_title: 'Sistemas',
+        web_title2: 'web & gestión',
+        web_subtitle: 'Aplicaciones full-stack sobre React + Supabase para operación institucional, comercial y académica.',
+        fibertech_card_desc: 'Suite de gestión comercial con dashboard analítico en tiempo real, gamificación por rankings, comisiones automáticas y control de acceso por roles con auditoría completa.',
+        rrhh_card_desc: 'Sistema de talento humano para la Alcaldía de Pampanito: empleados, departamentos, asistencia en calendario mensual y marcaciones de entrada/salida con cálculo automático de horas.',
+        cobranza_card_desc: 'Plataforma tributaria para la Alcaldía de Pampán: padrón de contribuyentes, catálogo de contribuciones y registro de pagos con conversión automática de divisa y reportes imprimibles.',
+        bookworm_card_desc: 'Gestión de colección de libros y autores con relación N:M, integridad referencial aplicada a nivel de base de datos e interfaz responsive.',
         view_details: 'Ver Detalles ->',
         dev_cmd: 'git status --active',
         dev_title: 'En',
@@ -1221,12 +1440,13 @@
       },
       en: {
         nav_featured: 'commercial',
+        nav_web: 'web systems',
         nav_dev: 'in development',
         nav_archive: 'archive',
         nav_contact: 'contact',
         hero_cmd: 'ls -la ./commercial_systems',
         hero_title: 'Project Terminal',
-        hero_desc: 'Software engineering portfolio and production systems. Multi-terminal desktop solutions, offline-first mobile route-billing architectures, and technically rigorous game development.',
+        hero_desc: 'Software engineering portfolio and production systems. Multi-terminal desktop solutions, institutional web platforms on React + Supabase, offline-first mobile route-billing architectures, and technically rigorous game development.',
         hero_cta1: 'View Systems',
         hero_cta2: 'Laboratory',
         p_cmd: 'cat commercial_systems.json',
@@ -1235,6 +1455,14 @@
         p_subtitle: 'Proprietary software solutions active in production, serving real business clients under licensing and B2B subscription models.',
         sisven_card_desc: 'Comprehensive Point of Sale (POS) and ERP system with reactive LAN architecture, real-time dual-currency invoicing (USD/Bs with 17:00 BCV rule), 203 DPI thermal emulation, and Cython-compiled security with Machine ID.',
         distquesos_card_desc: 'Native mobile platform (Kotlin/Compose) for commercial distribution and route debt collection. Designed under an Offline-First architecture for zero-internet field operations, actively monetized on monthly subscription.',
+        web_cmd: 'cat web_platforms.json',
+        web_title: 'Web',
+        web_title2: 'management systems',
+        web_subtitle: 'Full-stack applications built on React + Supabase for institutional, commercial, and academic operations.',
+        fibertech_card_desc: 'Commercial management suite with a real-time analytics dashboard, ranking-based gamification, automated commissions, and role-based access control with full auditing.',
+        rrhh_card_desc: 'Human resources system for the Pampanito City Hall: employees, departments, monthly calendar attendance, and check-in/check-out tracking with automatic hours calculation.',
+        cobranza_card_desc: 'Tax collection platform for the Pampán City Hall: taxpayer registry, tax catalog, and payment tracking with automatic currency conversion and printable reports.',
+        bookworm_card_desc: 'Book and author collection management with an N:M relationship, database-enforced referential integrity, and a responsive interface.',
         view_details: 'View Details ->',
         dev_cmd: 'git status --active',
         dev_title: 'In',
@@ -1330,6 +1558,148 @@
             'Encrypted Offline Licensing: Terminal activation tied to the smartphone unique hardware signature with expiry control.'
           ],
           metrics: 'Cuts route debt collection time by over 80%. Successfully commercialized under a recurring monthly SaaS retainer model.'
+        }
+      },
+      fibertech: {
+        title: 'FiberTech Sales System',
+        badge: 'B2B SALES SUITE · DELIVERED',
+        date: '2025-07',
+        image: 'fibertech.png',
+        frameLabel: 'terminal://fibertech_sales',
+        deviceType: 'desktop',
+        tags: ['React 18', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Supabase', 'PostgreSQL RLS', 'Recharts', 'React Hook Form + Zod'],
+        es: {
+          desc: 'Sistema integral de gestión comercial para FiberTech: administración de asesores de ventas, metas, clientes, zonas y análisis de rendimiento. Incluye dashboard analítico en tiempo real, gamificación con rankings para motivar al equipo y auditoría completa de operaciones.',
+          features: [
+            'Dashboard Analítico: métricas de ventas y rendimiento en tiempo real con gráficos interactivos (Recharts).',
+            'Gamificación Comercial: rankings y competencias entre asesores para incentivar el cumplimiento de metas.',
+            'Motor de Ventas y Comisiones: registro de ventas con items detallados, numeración automática y cálculo de comisiones por trigger.',
+            'RBAC + RLS: roles admin / asesor / usuario con Row Level Security aplicado en PostgreSQL.',
+            'Auditoría Total: triggers de audit_log que registran cada operación sensible del sistema.',
+            'Reportes Exportables: reportes de ventas y comisiones en PDF (jsPDF) y Excel (XLSX).',
+            'Formularios Blindados: validación de datos con React Hook Form + esquemas Zod.',
+            'Notificaciones & Dark Mode: sistema de alertas internas e interfaz adaptable claro/oscuro.'
+          ],
+          metrics: 'Centraliza metas, comisiones y desempeño del equipo comercial en un solo panel con trazabilidad completa de operaciones.'
+        },
+        en: {
+          desc: 'Comprehensive commercial management system for FiberTech: sales advisor administration, goals, clients, zones, and performance analytics. Features a real-time analytics dashboard, ranking-based gamification to motivate the team, and full operation auditing.',
+          features: [
+            'Analytics Dashboard: real-time sales and performance metrics with interactive charts (Recharts).',
+            'Sales Gamification: advisor rankings and competitions to drive goal attainment.',
+            'Sales & Commission Engine: detailed line-item sales, automatic numbering, and trigger-based commission calculation.',
+            'RBAC + RLS: admin / advisor / user roles enforced with PostgreSQL Row Level Security.',
+            'Full Auditing: audit_log triggers recording every sensitive system operation.',
+            'Exportable Reports: sales and commission reports in PDF (jsPDF) and Excel (XLSX).',
+            'Hardened Forms: data validation with React Hook Form + Zod schemas.',
+            'Notifications & Dark Mode: internal alert system and adaptive light/dark interface.'
+          ],
+          metrics: 'Centralizes goals, commissions, and sales team performance in a single panel with full operation traceability.'
+        }
+      },
+      rrhh: {
+        title: 'Gestión de Personal — Pampanito',
+        badge: 'GOV SYSTEM · DEPLOYED',
+        date: '2025-05',
+        image: 'rrhh.png',
+        frameLabel: 'terminal://rrhh_pampanito',
+        deviceType: 'desktop',
+        tags: ['React 18', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'React Query', 'Supabase', 'PostgreSQL RLS'],
+        es: {
+          desc: 'Sistema de gestión de talento humano desarrollado para la Alcaldía del Municipio Pampanito. Digitaliza procesos administrativos que antes eran manuales: registro de empleados, estructura departamental, control de asistencia y marcación de jornada, bajo metodología Scrum con entregables iterativos.',
+          features: [
+            'Gestión de Empleados: CRUD completo con datos personales/laborales, cédula, cargo y asignación a departamentos.',
+            'Estructura Departamental: administración de departamentos con visualización de personal asociado.',
+            'Asistencia en Calendario: vista mensual de registros con estados (presente, ausente, justificado) e histórico navegable.',
+            'Time Tracking: marcación digital de entradas y salidas con cálculo automático de horas trabajadas.',
+            'Dashboard en Vivo: contadores, estadísticas y reloj digital actualizados en tiempo real.',
+            'Sincronización en Tiempo Real: suscripciones de Supabase que reflejan cambios de datos al instante.',
+            'Seguridad RLS: políticas de seguridad a nivel de fila en PostgreSQL y validación de entrada.',
+            'UI Modular: componentes reutilizables (PageHeader, Card, Table, Dialog) con diseño responsive.'
+          ],
+          metrics: 'En uso en la Alcaldía de Pampanito — digitaliza el control de asistencia y centraliza la información del personal municipal.'
+        },
+        en: {
+          desc: 'Human resources management system built for the Pampanito Municipality City Hall. Digitizes previously manual administrative processes: employee records, departmental structure, attendance control, and shift clock-in/out — developed under a Scrum methodology with iterative deliverables.',
+          features: [
+            'Employee Management: full CRUD with personal/employment data, national ID, position, and department assignment.',
+            'Departmental Structure: department administration with associated staff views.',
+            'Calendar Attendance: monthly record view with statuses (present, absent, excused) and browsable history.',
+            'Time Tracking: digital check-in/check-out punches with automatic worked-hours calculation.',
+            'Live Dashboard: real-time counters, statistics, and digital clock.',
+            'Real-Time Sync: Supabase subscriptions reflecting data changes instantly.',
+            'RLS Security: PostgreSQL row-level security policies and input validation.',
+            'Modular UI: reusable components (PageHeader, Card, Table, Dialog) with responsive design.'
+          ],
+          metrics: 'In use at the Pampanito City Hall — digitizes attendance control and centralizes municipal staff information.'
+        }
+      },
+      cobranza: {
+        title: 'Sistema de Cobranza — Pampán',
+        badge: 'GOV SYSTEM · DELIVERED',
+        date: '2025-05',
+        image: 'cobranza.png',
+        frameLabel: 'terminal://cobranza_pampan',
+        deviceType: 'desktop',
+        tags: ['React', 'TypeScript', 'Vite', 'Multi-Currency', 'Printable Reports', 'Tax Management'],
+        es: {
+          desc: 'Sistema de gestión tributaria para la Alcaldía de Pampán. Administra el padrón de contribuyentes, el catálogo de contribuciones municipales y el registro de pagos, con conversión automática entre euros y bolívares según tasa configurable y reportes imprimibles para operación física.',
+          features: [
+            'Padrón de Contribuyentes: registro y mantenimiento con categorización por tipo de contribuyente.',
+            'Catálogo de Contribuciones: precios en euros con conversión automática a bolívares y categorización por tipo.',
+            'Registro de Pagos: fecha, monto y tasa de cambio aplicada, con conversión automática entre divisas.',
+            'Reportes Imprimibles: listados de contribuciones y recaudación de pagos organizada por mes.',
+            'Configuración de Tasa: ajuste de la tasa de cambio vigente y opciones de respaldo de datos.',
+            'Módulos Administrados: acceso gestionado a contribuyentes, contribuciones, pagos y configuración.'
+          ],
+          metrics: 'Unifica padrón tributario, tasas y pagos con trazabilidad de divisa para la gestión de cobranza municipal.'
+        },
+        en: {
+          desc: 'Tax management system for the Pampán City Hall. Administers the taxpayer registry, the municipal tax catalog, and payment records, with automatic euro-to-bolívar conversion based on a configurable exchange rate and printable reports for physical operations.',
+          features: [
+            'Taxpayer Registry: registration and maintenance with categorization by taxpayer type.',
+            'Tax Catalog: euro-denominated pricing with automatic bolívar conversion and type categorization.',
+            'Payment Records: date, amount, and applied exchange rate with automatic currency conversion.',
+            'Printable Reports: tax listings and monthly-organized collection reports.',
+            'Rate Configuration: adjustable current exchange rate and data backup options.',
+            'Managed Modules: controlled access to taxpayers, taxes, payments, and configuration.'
+          ],
+          metrics: 'Unifies taxpayer registry, rates, and payments with currency traceability for municipal collections.'
+        }
+      },
+      bookworm: {
+        title: 'Bookworm',
+        badge: 'ACADEMIC · LIVE',
+        date: '2025-04',
+        image: 'bookworm.png',
+        frameLabel: 'terminal://bookworm',
+        deviceType: 'desktop',
+        tags: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Bootstrap 5', 'Tailwind CSS', 'shadcn/ui'],
+        es: {
+          desc: 'Aplicación web para la gestión de una colección de libros desarrollada como proyecto académico. Permite operaciones CRUD completas sobre libros y autores manteniendo relaciones muchos-a-muchos con integridad referencial aplicada desde la base de datos.',
+          features: [
+            'CRUD de Libros: título, ISBN, año de publicación, descripción y portada.',
+            'CRUD de Autores: nombre, año de nacimiento y biografía.',
+            'Relación N:M Real: tabla puente books_authors con UUIDs y restricciones en PostgreSQL.',
+            'Integridad Referencial: bloqueo de eliminación de autores con libros asociados.',
+            'Vista por Autor: exploración de los libros vinculados a cada autor.',
+            'Context API: estado global de libros y autores con React Context.',
+            'Responsive UI: Bootstrap 5 + Tailwind + shadcn/ui funcional en cualquier dispositivo.'
+          ],
+          metrics: 'Desplegado — modelo relacional N:M con integridad referencial garantizada a nivel de base de datos.'
+        },
+        en: {
+          desc: 'Web application for managing a book collection, built as an academic project. Provides full CRUD operations over books and authors while maintaining many-to-many relationships with database-enforced referential integrity.',
+          features: [
+            'Book CRUD: title, ISBN, publication year, description, and cover.',
+            'Author CRUD: name, birth year, and biography.',
+            'True N:M Relation: books_authors join table with UUIDs enforced in PostgreSQL.',
+            'Referential Integrity: deletion of authors with associated books is blocked.',
+            'Per-Author View: browse the books linked to each author.',
+            'Context API: global book and author state via React Context.',
+            'Responsive UI: Bootstrap 5 + Tailwind + shadcn/ui across all device sizes.'
+          ],
+          metrics: 'Deployed — N:M relational model with database-level referential integrity.'
         }
       },
       orbita: {
@@ -1525,7 +1895,9 @@
       const langData = data[currentLang];
 
       document.getElementById('modal-title').textContent = data.title;
-      document.getElementById('modal-badge').textContent = data.badge;
+      document.getElementById('modal-badge').textContent = data.badge + (data.date ? ' · ' + data.date : '');
+      const frameLabel = document.getElementById('modal-frame-label');
+      if (frameLabel) frameLabel.textContent = data.frameLabel || 'terminal://sisvenpos_v1.2.5';
       document.getElementById('modal-desc').innerHTML = langData.desc;
 
       const mediaCol = document.getElementById('modal-media-col');
@@ -1624,12 +1996,18 @@
       'sisven_pos.deploy(v1.2.5)',
       'distquesos.sync_route_b2b()',
       'cython_core.protect_machine_id()',
+      'fibertech.track_sales_goals()',
+      'pampanito_rrhh.attendance.sync()',
+      'cobranza.payments.multi_currency()',
       'orbita_terminal.run_gdd()',
     ];
     const TW_EN = [
       'sisven_pos.deploy(v1.2.5)',
       'distquesos.sync_route_b2b()',
       'cython_core.protect_machine_id()',
+      'fibertech.track_sales_goals()',
+      'pampanito_rrhh.attendance.sync()',
+      'cobranza.payments.multi_currency()',
       'orbita_terminal.run_gdd()',
     ];
     let TW_LINES = TW_ES;
